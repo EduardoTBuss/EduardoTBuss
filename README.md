@@ -19,24 +19,31 @@ Evito soluções “caixa-preta” e priorizo **implementações conscientes**, 
 - Modelagem matemática de algoritmos de Machine Learning  
 - Implementação e estudo de redes neurais além do uso direto de frameworks  
 - Simulação e análise de algoritmos de **Computação Quântica** com Qiskit  
+- Exploração inicial de **Quantum Machine Learning (QML)**
 
 ---
 
 ## Competências Técnicas
 
 ### Linguagens
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
-<img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" />
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
+  <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" />
+</p>
 
 ### Análise de Dados & Machine Learning
-<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" />
-<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
-<img src="https://img.shields.io/badge/Matplotlib-ffffff?style=flat-square&logo=matplotlib&logoColor=black" />
+<p>
+  <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/Matplotlib-ffffff?style=flat-square&logo=matplotlib&logoColor=black" />
+</p>
 
 ### Computação Quântica
-<img src="https://img.shields.io/badge/Qiskit-6929C4?style=flat-square&logo=qiskit&logoColor=white" />
+<p>
+  <img src="https://img.shields.io/badge/Qiskit-6929C4?style=flat-square&logo=qiskit&logoColor=white" />
+</p>
 
 ---
 
@@ -53,7 +60,7 @@ Os repositórios fixados refletem meu foco em **análise, fundamentação matem�
 
 - **Computação Quântica**
   - simulação de algoritmos quânticos clássicos  
-  - implementação do algoritmo de Bernstein–Vazirani em Qiskit  
+  - Exploração inicial de **Quantum Machine Learning (QML)**, com foco em compreensão conceitual 
 
 ---
 
@@ -61,7 +68,7 @@ Os repositórios fixados refletem meu foco em **análise, fundamentação matem�
 
 - **Algoritmo de Bernstein–Vazirani: Análise Quântica e Implementação no Qiskit**  
   Análise conceitual do algoritmo e simulação prática utilizando Qiskit.  
-  *(Apresentação de pôster — WECIQ 2025)*
+  *(WECIQ 2025)*
 
 - **CNN Architecture Assessment: Exploring Depth, Width, and Kernel Size for Image Classification**  
   Estudo experimental sobre o impacto da profundidade, largura e tamanho de kernel em arquiteturas CNN,  
