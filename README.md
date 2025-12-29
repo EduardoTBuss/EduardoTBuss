@@ -81,18 +81,20 @@ Os repositórios fixados refletem meu foco em **análise, fundamentação matem�
 
 ---
 
-## Estatísticas GitHub
+## 📊 Estatísticas GitHub
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=EduardoTBuss&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br&cache_seconds=1800" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=EduardoTBuss&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9&locale=pt-br&cache_seconds=1800" />
+  <img width="49%" height="195px" src="https://github-readme-stats-sigma-five.vercel.app/api?username=EduardoTBuss&show_icons=true&count_private=true&hide_border=true&title_color=1B4F72&icon_color=1B4F72&text_color=c9d1d9&bg_color=0d1117&locale=pt-br" alt="Eduardo Buss github stats" /> 
+  <img width="41%" height="195px" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=EduardoTBuss&layout=compact&hide_border=true&title_color=1B4F72&text_color=c9d1d9&bg_color=0d1117&locale=pt-br" />
 </div>
 
+
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=EduardoTBuss&theme=tokyonight&locale=pt-br" />
+  <img align="center" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=EduardoTBuss&theme=tokyonight" />
 </div>
 
 ---
+
 
 ## Contato
 <a href="https://www.linkedin.com/in/eduardotimmbuss" target="_blank">
