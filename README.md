@@ -7,7 +7,7 @@
 ---
 
 ## Perfil
-Estudante de **Engenharia de Computação (5º semestre)** com formação sólida em **matemática aplicada, estatística e programação**, direcionada para **Análise de Dados e Machine Learning**.
+Estudante de **Engenharia de Computação (4º semestre)** com formação sólida em **matemática aplicada, estatística e programação**, direcionada para **Análise de Dados e Machine Learning**.
 
 Meu trabalho é guiado por **rigor técnico**: entender hipóteses, modelar corretamente o problema, analisar resultados e limitações.  
 Evito soluções "caixa-preta" e priorizo **implementações conscientes**, mesmo quando uso bibliotecas consolidadas.
