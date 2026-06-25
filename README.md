@@ -1,105 +1,106 @@
 # Eduardo Timm Buss
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=1B4F72&center=true&vCenter=true&width=700&lines=Engenharia+de+Computa%C3%A7%C3%A3o;Data+Analysis+%26+Machine+Learning;Modelagem+Matem%C3%A1tica+e+Estat%C3%ADstica;Computa%C3%A7%C3%A3o+Qu%C3%A2ntica+%7C+Qiskit" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=1B4F72&center=true&vCenter=true&width=700&lines=Computer+Engineering+%40+UFPel;Quantum+Computing+%26+Fuzzy+Logic+Research;Machine+Learning+from+Scratch;Scientific+Computing+%26+Digital+Hardware" />
 </div>
 
 ---
 
-## Perfil
-Estudante de **Engenharia de Computação (4º semestre)** com formação sólida em **matemática aplicada, estatística e programação**, direcionada para **Análise de Dados e Machine Learning**.
+## About
+Computer Engineering student (5th semester) at **UFPel** (Federal University of Pelotas, Brazil),
+working as an undergraduate research assistant (Scientific Initiation, **PROBIC/FAPERGS**) in
+**quantum computing and fuzzy logic**, advised by Prof. Dr. Renata Reiser
+(Tech&ApplieD-GM / Q-Flex group).
 
-Meu trabalho é guiado por **rigor técnico**: entender hipóteses, modelar corretamente o problema, analisar resultados e limitações.  
-Evito soluções "caixa-preta" e priorizo **implementações conscientes**, mesmo quando uso bibliotecas consolidadas.
+I care about **technical rigor**: stating the hypothesis, modeling the problem correctly, and
+being honest about results and limitations. I avoid black-box solutions and favor
+**from-scratch implementations** to fully understand what a model or system actually does —
+even when production libraries exist.
+
+**Research interests:** variational quantum machine learning (VQC), fuzzy implications and the
+Compositional Rule of Inference (CRI), physics-informed neural networks, and FPGA acceleration
+of quantum-inspired arithmetic. *(Several manuscripts in preparation / under review.)*
 
 ---
 
-## Foco Técnico
-- Análise exploratória e estatística de dados reais  
-- Modelagem matemática de algoritmos de Machine Learning  
-- Implementação e estudo de redes neurais além do uso direto de frameworks  
-- Simulação e análise de algoritmos de **Computação Quântica** com Qiskit  
-- Exploração inicial de **Quantum Machine Learning (QML)**
+## Focus
+- Variational Quantum Machine Learning and quantum circuit simulation (PennyLane, Qiskit)
+- Fuzzy logic: t-norms, fuzzy implications, and the Compositional Rule of Inference
+- Machine learning implemented from first principles (manual forward/backprop)
+- Numerical simulation and scientific computing
+- Digital hardware / FPGA (synthesizable VHDL, fixed-point arithmetic)
 
 ---
 
-## Competências Técnicas
+## Tech Stack
 
-### Linguagens
+**Languages**
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
   <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" />
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
+  <img src="https://img.shields.io/badge/VHDL-543978?style=for-the-badge&logo=v&logoColor=white" />
+  <img src="https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white" />
 </p>
 
-### Análise de Dados & Machine Learning
+**Quantum & Machine Learning**
 <p>
-  <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" />
-  <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/Matplotlib-ffffff?style=flat-square&logo=matplotlib&logoColor=black" />
-</p>
-
-### Computação Quântica
-<p>
+  <img src="https://img.shields.io/badge/PennyLane-1B6AC6?style=flat-square&logo=pennylane&logoColor=white" />
   <img src="https://img.shields.io/badge/Qiskit-6929C4?style=flat-square&logo=qiskit&logoColor=white" />
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" />
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" />
+</p>
+
+**Backend & Tooling**
+<p>
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
+  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=matplotlib&logoColor=white" />
 </p>
 
 ---
 
-## Projetos (seleção)
-Os repositórios fixados refletem meu foco em **análise, fundamentação matemática e clareza de resultados**, incluindo:
+## Featured Projects
 
-- **Análise Estatística de Dados**
-  - exploração, visualização e interpretação crítica dos dados  
-  - identificação de padrões, correlações e limitações
-
-- **Machine Learning com base matemática**
-  - estudo explícito de funções de perda, gradiente e otimização  
-  - implementações próprias para compreensão completa do modelo
-
-- **Computação Quântica**
-  - simulação de algoritmos quânticos clássicos  
-  - Exploração inicial de **Quantum Machine Learning (QML)**, com foco em compreensão conceitual 
+| Area | Project | What it is |
+|---|---|---|
+| ⚛️ Quantum | [QuantumComputing](https://github.com/EduardoTBuss/QuantumComputing) | Educational quantum algorithms in Qiskit (Deutsch–Jozsa, Bernstein–Vazirani, Mach–Zehnder) |
+| 🧠 ML from scratch | [MNIST-Neural-Network-Numpy](https://github.com/EduardoTBuss/MNIST-Neural-Network-Numpy) | Neural network in pure NumPy — manual forward/backprop |
+| 🧠 ML in C | [NNforClimate](https://github.com/EduardoTBuss/NNforClimate) | Feed-forward network in **pure C**, backprop from scratch |
+| 🪐 Simulation | [nbody-sim](https://github.com/EduardoTBuss/nbody-sim) | From-scratch gravitational N-body simulator with symplectic integrators, validated by conservation laws |
+| 🏗️ Full-stack | [gestao-estoque](https://github.com/EduardoTBuss/gestao-estoque) | Inventory system (FastAPI + SQLAlchemy) with event-sourcing-lite and pessimistic locking |
+| 🖥️ Systems | [Z80](https://github.com/EduardoTBuss/Z80) | Z80 toolchain in C++: macro-assembler, two-pass assembler/linker, CPU emulator, Qt5 GUI |
 
 ---
 
-## 📄 Produção Acadêmica & Eventos
+## 📄 Publications & Talks
 
-- **Algoritmo de Bernstein–Vazirani: Análise Quântica e Implementação no Qiskit**  
-  Análise conceitual do algoritmo e simulação prática utilizando Qiskit.  
-  *(WECIQ 2025)*
-
-- **CNN Architecture Assessment: Exploring Depth, Width, and Kernel Size for Image Classification**  
-  Estudo experimental sobre o impacto da profundidade, largura e tamanho de kernel em arquiteturas CNN,  
-  utilizando o dataset **CIFAR-10** como benchmark.  
-  *(ERAMIA-RS 2025)*
-
-- **Análise do IMZ-Algoritmo com Simulação via Qiskit**  
-  Análise matemática do circuito interferométrico de Mach–Zehnder e sua simulação computacional em Qiskit.  
-  *(WEIT 2025)*
+- **Bernstein–Vazirani Algorithm: Quantum Analysis and Qiskit Implementation** — conceptual
+  analysis and simulation of the algorithm. *(WECIQ 2025)*
+- **CNN Architecture Assessment: Exploring Depth, Width, and Kernel Size for Image
+  Classification** — experimental study on CIFAR-10. *(ERAMIA-RS 2025)*
+- **Analysis of the Mach–Zehnder Interferometer Algorithm with Qiskit Simulation** — mathematical
+  analysis of the interferometric circuit and its computational simulation. *(WEIT 2025)*
 
 ---
 
-## 📊 Estatísticas GitHub
+## 📊 GitHub Stats
 
 <div align="center">
-  <img width="49%" height="195px" src="https://github-readme-stats-sigma-five.vercel.app/api?username=EduardoTBuss&show_icons=true&count_private=true&hide_border=true&title_color=1B4F72&icon_color=1B4F72&text_color=c9d1d9&bg_color=0d1117&locale=pt-br" alt="Eduardo Buss github stats" /> 
-  <img width="41%" height="195px" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=EduardoTBuss&layout=compact&hide_border=true&title_color=1B4F72&text_color=c9d1d9&bg_color=0d1117&locale=pt-br" />
-</div>
-
-
-<div align="center">
-  <img align="center" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=EduardoTBuss&theme=tokyonight" />
+  <img width="49%" height="195px" src="https://github-readme-stats-sigma-five.vercel.app/api?username=EduardoTBuss&show_icons=true&count_private=true&hide_border=true&title_color=1B4F72&icon_color=1B4F72&text_color=c9d1d9&bg_color=0d1117" />
+  <img width="41%" height="195px" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=EduardoTBuss&layout=compact&hide_border=true&title_color=1B4F72&text_color=c9d1d9&bg_color=0d1117" />
 </div>
 
 ---
 
-
-## Contato
+## 📫 Contact
 <a href="https://www.linkedin.com/in/eduardotimmbuss" target="_blank">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
 </a>
+<a href="mailto:etbuss@inf.ufpel.edu.br">
+  <img src="https://img.shields.io/badge/Academic-D14836?style=for-the-badge&logo=gmail&logoColor=white">
+</a>
 <a href="mailto:eduardotimmbus@gmail.com">
-  <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white">
+  <img src="https://img.shields.io/badge/Personal-333333?style=for-the-badge&logo=gmail&logoColor=white">
 </a>
