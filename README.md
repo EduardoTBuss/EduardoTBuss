@@ -65,12 +65,13 @@ of quantum-inspired arithmetic. *(Several manuscripts in preparation / under rev
 
 | Area | Project | What it is |
 |---|---|---|
-| ⚛️ Quantum | [QuantumComputing](https://github.com/EduardoTBuss/QuantumComputing) | Educational quantum algorithms in Qiskit (Deutsch–Jozsa, Bernstein–Vazirani, Mach–Zehnder) |
-| 🧠 ML from scratch | [MNIST-Neural-Network-Numpy](https://github.com/EduardoTBuss/MNIST-Neural-Network-Numpy) | Neural network in pure NumPy — manual forward/backprop |
-| 🧠 ML in C | [NNforClimate](https://github.com/EduardoTBuss/NNforClimate) | Feed-forward network in **pure C**, backprop from scratch |
+| ⚛️ Quantum | [quantum-algorithms-qiskit](https://github.com/EduardoTBuss/quantum-algorithms-qiskit) | Educational quantum algorithms in Qiskit (Deutsch–Jozsa, Bernstein–Vazirani, Mach–Zehnder) |
+| 🧠 ML from scratch | [mnist-neural-network-numpy](https://github.com/EduardoTBuss/mnist-neural-network-numpy) | Neural network in pure NumPy — manual forward/backprop |
+| 🧠 ML in C | [climate-neural-network-c](https://github.com/EduardoTBuss/climate-neural-network-c) | Feed-forward network in **pure C**, backprop from scratch |
+| 🖼️ Deep learning | [cifar10-cnn-pytorch](https://github.com/EduardoTBuss/cifar10-cnn-pytorch) | Deep CNN for CIFAR-10 in PyTorch — companion code to my ERAMIA-RS 2025 paper |
 | 🪐 Simulation | [nbody-sim](https://github.com/EduardoTBuss/nbody-sim) | From-scratch gravitational N-body simulator with symplectic integrators, validated by conservation laws |
-| 🏗️ Full-stack | [gestao-estoque](https://github.com/EduardoTBuss/gestao-estoque) | Inventory system (FastAPI + SQLAlchemy) with event-sourcing-lite and pessimistic locking |
-| 🖥️ Systems | [Z80](https://github.com/EduardoTBuss/Z80) | Z80 toolchain in C++: macro-assembler, two-pass assembler/linker, CPU emulator, Qt5 GUI |
+| 🏗️ Full-stack | [inventory-management-api](https://github.com/EduardoTBuss/inventory-management-api) | Inventory system (FastAPI + SQLAlchemy) with event-sourcing-lite and pessimistic locking |
+| 📊 Data analytics | [poker-decision-analytics](https://github.com/EduardoTBuss/poker-decision-analytics) | Decision analytics under uncertainty on 60k poker hands — EV, tail risk, drawdown |
 
 ---
 
@@ -103,4 +104,7 @@ of quantum-inspired arithmetic. *(Several manuscripts in preparation / under rev
 </a>
 <a href="mailto:eduardotimmbus@gmail.com">
   <img src="https://img.shields.io/badge/Personal-333333?style=for-the-badge&logo=gmail&logoColor=white">
+</a>
+<a href="https://orcid.org/0009-0007-6356-5438" target="_blank">
+  <img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white">
 </a>
