@@ -1,0 +1,20 @@
+{
+  "updated": "2026-07-29",
+  "items": [
+    {
+      "title": "Machine learning",
+      "detail": "Neural networks, numerical validation and learning systems",
+      "status": "active"
+    },
+    {
+      "title": "Fuzzy logic",
+      "detail": "Inference, membership functions and decision systems",
+      "status": "active"
+    },
+    {
+      "title": "Quantum machine learning",
+      "detail": "Variational circuits, optimization and hybrid models",
+      "status": "active"
+    }
+  ]
+}

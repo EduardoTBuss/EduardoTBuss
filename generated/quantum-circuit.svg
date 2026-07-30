@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">Variational quantum circuit</title>
+  <desc id="desc">A four-qubit hardware-efficient variational circuit with data encoding, parameterized rotations, staggered linear entanglement and expectation-value measurement.</desc>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .eyebrow { fill: #29e6f2; font-size: 13px; font-weight: 700; letter-spacing: 2px; }
+    .title { fill: #e6f4ff; font-size: 36px; font-weight: 720; letter-spacing: -1px; }
+    .heading { fill: #e6f4ff; font-size: 22px; font-weight: 700; }
+    .subheading { fill: #a78bfa; font-size: 16px; font-weight: 700; letter-spacing: .7px; }
+    .body { fill: #91a7bd; font-size: 15px; }
+    .small { fill: #91a7bd; font-size: 12px; }
+    .code { fill: #29e6f2; font-size: 13px; }
+    .panel { fill: #091326; stroke: #17375a; stroke-width: 1.2; fill-opacity: 0; stroke-dasharray: 1700; stroke-dashoffset: 1700; animation: panelBuild 1.05s ease forwards; animation-delay: calc(var(--section-delay, 0s) + var(--panel-delay, .25s)); }
+    .panel2 { fill: #0c1930; stroke: #17375a; stroke-width: 1.2; fill-opacity: 0; stroke-dasharray: 1700; stroke-dashoffset: 1700; animation: panelBuild 1.05s ease forwards; animation-delay: calc(var(--section-delay, 0s) + var(--panel-delay, .25s)); }
+    .reveal { opacity: 0; transform: translateY(8px); animation: reveal .72s ease forwards; animation-delay: calc(var(--section-delay, 0s) + var(--delay, 0s)); }
+    .draw { stroke-dasharray: var(--length, 500); stroke-dashoffset: var(--length, 500); animation: draw 1.4s ease forwards; animation-delay: calc(var(--section-delay, 0s) + var(--delay, .2s)); }
+    .pulse { animation: pulse 2.5s ease-in-out infinite; animation-delay: calc(var(--section-delay, 0s) + var(--delay, 0s)); transform-box: fill-box; transform-origin: center; }
+    .signal { stroke-dasharray: 4 14; animation: signal 2.8s linear infinite; animation-delay: var(--section-delay, 0s); }
+    .float { animation: float 4s ease-in-out infinite; animation-delay: var(--section-delay, 0s); }
+    .gridBoot { opacity: 0; animation: gridBoot 1.4s ease forwards; animation-delay: var(--section-delay, 0s); }
+    .borderBoot { stroke-dasharray: 3200; stroke-dashoffset: 3200; animation: draw 1.35s ease forwards; animation-delay: var(--section-delay, 0s); }
+    .cornerBoot { stroke-dasharray: 420; stroke-dashoffset: 420; animation: draw .85s ease forwards; animation-delay: calc(var(--section-delay, 0s) + .12s); }
+    .scan { animation: scan 2.5s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--section-delay, 0s); }
+    .layerNode { transform-box: fill-box; transform-origin: center; animation: layerNode 4s ease-in-out infinite; animation-delay: calc(var(--section-delay, 0s) + var(--node-delay, 0s)); }
+    .connectionStage { animation: connectionGlow 4s ease-in-out infinite; animation-delay: calc(var(--section-delay, 0s) + var(--edge-delay, 0s)); }
+    .traveler { filter: url(#glow); }
+    @keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes panelBuild { 0% { fill-opacity: 0; stroke-dashoffset: 1700; } 62% { fill-opacity: 0; stroke-dashoffset: 0; } 100% { fill-opacity: 1; stroke-dashoffset: 0; } }
+    @keyframes pulse { 0%, 100% { opacity: .45; transform: scale(.85); } 50% { opacity: 1; transform: scale(1.18); } }
+    @keyframes signal { to { stroke-dashoffset: -72; } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    @keyframes gridBoot { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes scan { 0% { transform: translateY(-4px); opacity: 0; } 10% { opacity: .9; } 88% { opacity: .55; } 100% { transform: translateY(480px); opacity: 0; } }
+    @keyframes layerNode { 0%, 18%, 100% { opacity: .42; transform: scale(.82); } 27%, 42% { opacity: 1; transform: scale(1.45); } 55% { opacity: .72; transform: scale(1); } }
+    @keyframes connectionGlow { 0%, 18%, 100% { opacity: .18; } 25%, 48% { opacity: .95; } 62% { opacity: .35; } }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .draw, .pulse, .signal, .float, .gridBoot, .borderBoot, .cornerBoot, .scan, .layerNode, .connectionStage, .panel, .panel2 { animation-duration: .001ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; animation-fill-mode: both !important; }
+      .traveler { display: none; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050a16"/><stop offset=".52" stop-color="#061326"/><stop offset="1" stop-color="#09091b"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#29e6f2"/><stop offset=".52" stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <radialGradient id="orb"><stop stop-color="#29e6f2" stop-opacity=".17"/><stop offset=".7" stop-color="#a78bfa" stop-opacity=".06"/><stop offset="1" stop-color="#050a16" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#123050" stroke-opacity=".27" stroke-width="1"/></pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="1200" height="480" rx="22" fill="url(#bg)"/>
+  <rect width="1200" height="480" rx="22" fill="url(#grid)" class="gridBoot"/>
+  <rect x="1" y="1" width="1198" height="478" rx="21" fill="none" stroke="#18395d" class="borderBoot"/>
+  <path d="M24 12H150 M12 24V90 M1176 468H1050 M1188 456V390" stroke="url(#accent)" stroke-width="2" opacity=".7" class="cornerBoot"/>
+  <rect x="18" y="0" width="1164" height="2" rx="1" fill="url(#accent)" opacity="0" class="scan" filter="url(#glow)"/>
+
+  <defs>
+    <marker id="qArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#29e6f2"/></marker>
+  </defs>
+  <text x="42" y="49" class="eyebrow reveal" style="--delay:.18s">VARIATIONAL QUANTUM CIRCUIT / HARDWARE-EFFICIENT ANSATZ</text>
+  <text x="1158" y="49" fill="#91a7bd" font-size="12" text-anchor="end" class="reveal" style="--delay:.28s">4 QUBITS · RY/RZ ROTATIONS · STAGGERED LINEAR CX</text>
+  <rect x="32" y="76" width="1136" height="354" rx="19" class="panel" style="--panel-delay:.18s"/>
+
+  <g class="reveal" style="--delay:.34s"><text x="54" y="173" class="small">q0 |0⟩</text><text x="54" y="233" class="small">q1 |0⟩</text><text x="54" y="293" class="small">q2 |0⟩</text><text x="54" y="353" class="small">q3 |0⟩</text></g>
+  <g fill="none" stroke="#426688" stroke-width="1.5"><path d="M112 168H1018" class="draw" style="--length:920;--delay:0.42s"/><path d="M112 228H1018" class="draw" style="--length:920;--delay:0.50s"/><path d="M112 288H1018" class="draw" style="--length:920;--delay:0.58s"/><path d="M112 348H1018" class="draw" style="--length:920;--delay:0.66s"/></g>
+
+  <g class="reveal" style="--delay:.5s"><text x="181" y="111" class="small" text-anchor="middle">DATA ENCODING</text></g>
+  <g class="reveal" style="--delay:0.62s">
+              <rect x="150" y="150" width="62" height="36" rx="7" fill="#101a31" stroke="#38bdf8"/>
+              <text x="181.0" y="172" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(xᵢ)</text>
+            </g><g class="reveal" style="--delay:0.66s">
+              <rect x="150" y="210" width="62" height="36" rx="7" fill="#101a31" stroke="#38bdf8"/>
+              <text x="181.0" y="232" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(xᵢ)</text>
+            </g><g class="reveal" style="--delay:0.70s">
+              <rect x="150" y="270" width="62" height="36" rx="7" fill="#101a31" stroke="#38bdf8"/>
+              <text x="181.0" y="292" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(xᵢ)</text>
+            </g><g class="reveal" style="--delay:0.74s">
+              <rect x="150" y="330" width="62" height="36" rx="7" fill="#101a31" stroke="#38bdf8"/>
+              <text x="181.0" y="352" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(xᵢ)</text>
+            </g>
+
+  <g class="reveal" style="--delay:.85s"><text x="329" y="111" class="small" text-anchor="middle">ROTATION LAYER 1</text></g>
+  <g class="reveal" style="--delay:0.92s">
+              <rect x="274" y="150" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="300.0" y="172" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(θ₁ᵢ)</text>
+            </g><g class="reveal" style="--delay:0.96s">
+              <rect x="274" y="210" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="300.0" y="232" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(θ₁ᵢ)</text>
+            </g><g class="reveal" style="--delay:1.00s">
+              <rect x="274" y="270" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="300.0" y="292" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(θ₁ᵢ)</text>
+            </g><g class="reveal" style="--delay:1.04s">
+              <rect x="274" y="330" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="300.0" y="352" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(θ₁ᵢ)</text>
+            </g>
+  <g class="reveal" style="--delay:1.02s">
+              <rect x="338" y="150" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="364.0" y="172" fill="#e6f4ff" font-size="11" text-anchor="middle">R𝓏(φ₁ᵢ)</text>
+            </g><g class="reveal" style="--delay:1.06s">
+              <rect x="338" y="210" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="364.0" y="232" fill="#e6f4ff" font-size="11" text-anchor="middle">R𝓏(φ₁ᵢ)</text>
+            </g><g class="reveal" style="--delay:1.10s">
+              <rect x="338" y="270" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="364.0" y="292" fill="#e6f4ff" font-size="11" text-anchor="middle">R𝓏(φ₁ᵢ)</text>
+            </g><g class="reveal" style="--delay:1.14s">
+              <rect x="338" y="330" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="364.0" y="352" fill="#e6f4ff" font-size="11" text-anchor="middle">R𝓏(φ₁ᵢ)</text>
+            </g>
+
+  <g class="reveal" style="--delay:1.12s">
+    <text x="447" y="111" class="small" text-anchor="middle">CX / PAIRS</text>
+    <g stroke="#29e6f2" stroke-width="1.7" filter="url(#glow)">
+      <path d="M430 168V228"/><path d="M470 288V348"/>
+    </g>
+    <g fill="#29e6f2"><circle cx="430" cy="168" r="5"/><circle cx="470" cy="288" r="5"/></g>
+    <g fill="none" stroke="#29e6f2"><circle cx="430" cy="228" r="10"/><path d="M420 228H440M430 218V238"/><circle cx="470" cy="348" r="10"/><path d="M460 348H480M470 338V358"/></g>
+  </g>
+
+  <g class="reveal" style="--delay:1.34s"><text x="577" y="111" class="small" text-anchor="middle">ROTATION LAYER 2</text></g>
+  <g class="reveal" style="--delay:1.40s">
+              <rect x="522" y="150" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="548.0" y="172" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(θ₂ᵢ)</text>
+            </g><g class="reveal" style="--delay:1.44s">
+              <rect x="522" y="210" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="548.0" y="232" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(θ₂ᵢ)</text>
+            </g><g class="reveal" style="--delay:1.48s">
+              <rect x="522" y="270" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="548.0" y="292" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(θ₂ᵢ)</text>
+            </g><g class="reveal" style="--delay:1.52s">
+              <rect x="522" y="330" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="548.0" y="352" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(θ₂ᵢ)</text>
+            </g>
+  <g class="reveal" style="--delay:1.50s">
+              <rect x="586" y="150" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="612.0" y="172" fill="#e6f4ff" font-size="11" text-anchor="middle">R𝓏(φ₂ᵢ)</text>
+            </g><g class="reveal" style="--delay:1.54s">
+              <rect x="586" y="210" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="612.0" y="232" fill="#e6f4ff" font-size="11" text-anchor="middle">R𝓏(φ₂ᵢ)</text>
+            </g><g class="reveal" style="--delay:1.58s">
+              <rect x="586" y="270" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="612.0" y="292" fill="#e6f4ff" font-size="11" text-anchor="middle">R𝓏(φ₂ᵢ)</text>
+            </g><g class="reveal" style="--delay:1.62s">
+              <rect x="586" y="330" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="612.0" y="352" fill="#e6f4ff" font-size="11" text-anchor="middle">R𝓏(φ₂ᵢ)</text>
+            </g>
+
+  <g class="reveal" style="--delay:1.66s">
+    <text x="687" y="111" class="small" text-anchor="middle">CX / BRIDGE</text>
+    <path d="M687 228V288" stroke="#29e6f2" stroke-width="1.7" filter="url(#glow)"/>
+    <circle cx="687" cy="228" r="5" fill="#29e6f2"/>
+    <circle cx="687" cy="288" r="10" fill="none" stroke="#29e6f2"/><path d="M677 288H697M687 278V298" stroke="#29e6f2"/>
+  </g>
+
+  <g class="reveal" style="--delay:1.82s"><text x="817" y="111" class="small" text-anchor="middle">FINAL ROTATION</text></g>
+  <g class="reveal" style="--delay:1.88s">
+              <rect x="758" y="150" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="784.0" y="172" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(θ₃ᵢ)</text>
+            </g><g class="reveal" style="--delay:1.92s">
+              <rect x="758" y="210" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="784.0" y="232" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(θ₃ᵢ)</text>
+            </g><g class="reveal" style="--delay:1.96s">
+              <rect x="758" y="270" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="784.0" y="292" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(θ₃ᵢ)</text>
+            </g><g class="reveal" style="--delay:2.00s">
+              <rect x="758" y="330" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="784.0" y="352" fill="#e6f4ff" font-size="11" text-anchor="middle">Rᵧ(θ₃ᵢ)</text>
+            </g>
+  <g class="reveal" style="--delay:1.98s">
+              <rect x="822" y="150" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="848.0" y="172" fill="#e6f4ff" font-size="11" text-anchor="middle">R𝓏(φ₃ᵢ)</text>
+            </g><g class="reveal" style="--delay:2.02s">
+              <rect x="822" y="210" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="848.0" y="232" fill="#e6f4ff" font-size="11" text-anchor="middle">R𝓏(φ₃ᵢ)</text>
+            </g><g class="reveal" style="--delay:2.06s">
+              <rect x="822" y="270" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="848.0" y="292" fill="#e6f4ff" font-size="11" text-anchor="middle">R𝓏(φ₃ᵢ)</text>
+            </g><g class="reveal" style="--delay:2.10s">
+              <rect x="822" y="330" width="52" height="36" rx="7" fill="#101a31" stroke="#a78bfa"/>
+              <text x="848.0" y="352" fill="#e6f4ff" font-size="11" text-anchor="middle">R𝓏(φ₃ᵢ)</text>
+            </g>
+
+  <g class="reveal" style="--delay:2.16s"><text x="962" y="111" class="small" text-anchor="middle">OBSERVABLES</text></g>
+  <g class="reveal" style="--delay:2.38s">
+          <rect x="932" y="150" width="60" height="36" rx="8" fill="#181333" stroke="#d56dff"/>
+          <text x="962" y="172" fill="#e6f4ff" font-size="12" text-anchor="middle">⟨Z0⟩</text>
+        </g><g class="reveal" style="--delay:2.43s">
+          <rect x="932" y="210" width="60" height="36" rx="8" fill="#181333" stroke="#d56dff"/>
+          <text x="962" y="232" fill="#e6f4ff" font-size="12" text-anchor="middle">⟨Z1⟩</text>
+        </g><g class="reveal" style="--delay:2.48s">
+          <rect x="932" y="270" width="60" height="36" rx="8" fill="#181333" stroke="#d56dff"/>
+          <text x="962" y="292" fill="#e6f4ff" font-size="12" text-anchor="middle">⟨Z2⟩</text>
+        </g><g class="reveal" style="--delay:2.53s">
+          <rect x="932" y="330" width="60" height="36" rx="8" fill="#181333" stroke="#d56dff"/>
+          <text x="962" y="352" fill="#e6f4ff" font-size="12" text-anchor="middle">⟨Z3⟩</text>
+        </g>
+  <g fill="none" stroke="#29e6f2" stroke-width="2" opacity=".85"><circle r="4.5" fill="#29e6f2" class="traveler">
+          <animateMotion path="M112 168H1018" dur="3.8s" begin="1.0s" repeatCount="indefinite"/>
+        </circle><circle r="4.5" fill="#a78bfa" class="traveler">
+          <animateMotion path="M112 228H1018" dur="3.8s" begin="1.3s" repeatCount="indefinite"/>
+        </circle><circle r="4.5" fill="#29e6f2" class="traveler">
+          <animateMotion path="M112 288H1018" dur="3.8s" begin="1.6s" repeatCount="indefinite"/>
+        </circle><circle r="4.5" fill="#a78bfa" class="traveler">
+          <animateMotion path="M112 348H1018" dur="3.8s" begin="1.9s" repeatCount="indefinite"/>
+        </circle></g>
+
+  <g class="reveal" style="--delay:2.55s"><path d="M1018 383C1018 420 840 416 720 416H330C258 416 248 394 274 374" fill="none" stroke="#29e6f2" stroke-width="1.5" marker-end="url(#qArrow)" class="signal"/></g>
+  <text x="1040" y="383" class="code reveal" style="--delay:2.5s">C(θ)</text>
+  <text x="535" y="410" class="small reveal" style="--delay:2.65s">CLASSICAL OPTIMIZER UPDATES θ, φ</text>
+  <text x="48" y="457" class="code reveal" style="--delay:2.75s">|ψ(x,θ)⟩ = Uvar(θ) Uenc(x) |0⟩^⊗4</text>
+  <text x="1152" y="457" class="small reveal" text-anchor="end" style="--delay:2.82s">illustrative ansatz · topology should follow the target problem / hardware</text>
+</svg>

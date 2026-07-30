@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
+  <title id="title">Selected projects</title>
+  <desc id="desc">Six selected projects connecting research ideas to working code.</desc>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .eyebrow { fill: #29e6f2; font-size: 13px; font-weight: 700; letter-spacing: 2px; }
+    .title { fill: #e6f4ff; font-size: 36px; font-weight: 720; letter-spacing: -1px; }
+    .heading { fill: #e6f4ff; font-size: 22px; font-weight: 700; }
+    .subheading { fill: #a78bfa; font-size: 16px; font-weight: 700; letter-spacing: .7px; }
+    .body { fill: #91a7bd; font-size: 15px; }
+    .small { fill: #91a7bd; font-size: 12px; }
+    .code { fill: #29e6f2; font-size: 13px; }
+    .panel { fill: #091326; stroke: #17375a; stroke-width: 1.2; fill-opacity: 0; stroke-dasharray: 1700; stroke-dashoffset: 1700; animation: panelBuild 1.05s ease forwards; animation-delay: calc(var(--section-delay, 0s) + var(--panel-delay, .25s)); }
+    .panel2 { fill: #0c1930; stroke: #17375a; stroke-width: 1.2; fill-opacity: 0; stroke-dasharray: 1700; stroke-dashoffset: 1700; animation: panelBuild 1.05s ease forwards; animation-delay: calc(var(--section-delay, 0s) + var(--panel-delay, .25s)); }
+    .reveal { opacity: 0; transform: translateY(8px); animation: reveal .72s ease forwards; animation-delay: calc(var(--section-delay, 0s) + var(--delay, 0s)); }
+    .draw { stroke-dasharray: var(--length, 500); stroke-dashoffset: var(--length, 500); animation: draw 1.4s ease forwards; animation-delay: calc(var(--section-delay, 0s) + var(--delay, .2s)); }
+    .pulse { animation: pulse 2.5s ease-in-out infinite; animation-delay: calc(var(--section-delay, 0s) + var(--delay, 0s)); transform-box: fill-box; transform-origin: center; }
+    .signal { stroke-dasharray: 4 14; animation: signal 2.8s linear infinite; animation-delay: var(--section-delay, 0s); }
+    .float { animation: float 4s ease-in-out infinite; animation-delay: var(--section-delay, 0s); }
+    .gridBoot { opacity: 0; animation: gridBoot 1.4s ease forwards; animation-delay: var(--section-delay, 0s); }
+    .borderBoot { stroke-dasharray: 3200; stroke-dashoffset: 3200; animation: draw 1.35s ease forwards; animation-delay: var(--section-delay, 0s); }
+    .cornerBoot { stroke-dasharray: 420; stroke-dashoffset: 420; animation: draw .85s ease forwards; animation-delay: calc(var(--section-delay, 0s) + .12s); }
+    .scan { animation: scan 2.5s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--section-delay, 0s); }
+    .layerNode { transform-box: fill-box; transform-origin: center; animation: layerNode 4s ease-in-out infinite; animation-delay: calc(var(--section-delay, 0s) + var(--node-delay, 0s)); }
+    .connectionStage { animation: connectionGlow 4s ease-in-out infinite; animation-delay: calc(var(--section-delay, 0s) + var(--edge-delay, 0s)); }
+    .traveler { filter: url(#glow); }
+    @keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes panelBuild { 0% { fill-opacity: 0; stroke-dashoffset: 1700; } 62% { fill-opacity: 0; stroke-dashoffset: 0; } 100% { fill-opacity: 1; stroke-dashoffset: 0; } }
+    @keyframes pulse { 0%, 100% { opacity: .45; transform: scale(.85); } 50% { opacity: 1; transform: scale(1.18); } }
+    @keyframes signal { to { stroke-dashoffset: -72; } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    @keyframes gridBoot { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes scan { 0% { transform: translateY(-4px); opacity: 0; } 10% { opacity: .9; } 88% { opacity: .55; } 100% { transform: translateY(690px); opacity: 0; } }
+    @keyframes layerNode { 0%, 18%, 100% { opacity: .42; transform: scale(.82); } 27%, 42% { opacity: 1; transform: scale(1.45); } 55% { opacity: .72; transform: scale(1); } }
+    @keyframes connectionGlow { 0%, 18%, 100% { opacity: .18; } 25%, 48% { opacity: .95; } 62% { opacity: .35; } }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .draw, .pulse, .signal, .float, .gridBoot, .borderBoot, .cornerBoot, .scan, .layerNode, .connectionStage, .panel, .panel2 { animation-duration: .001ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; animation-fill-mode: both !important; }
+      .traveler { display: none; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050a16"/><stop offset=".52" stop-color="#061326"/><stop offset="1" stop-color="#09091b"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#29e6f2"/><stop offset=".52" stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <radialGradient id="orb"><stop stop-color="#29e6f2" stop-opacity=".17"/><stop offset=".7" stop-color="#a78bfa" stop-opacity=".06"/><stop offset="1" stop-color="#050a16" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#123050" stroke-opacity=".27" stroke-width="1"/></pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="1200" height="690" rx="22" fill="url(#bg)"/>
+  <rect width="1200" height="690" rx="22" fill="url(#grid)" class="gridBoot"/>
+  <rect x="1" y="1" width="1198" height="688" rx="21" fill="none" stroke="#18395d" class="borderBoot"/>
+  <path d="M24 12H150 M12 24V90 M1176 678H1050 M1188 666V600" stroke="url(#accent)" stroke-width="2" opacity=".7" class="cornerBoot"/>
+  <rect x="18" y="0" width="1164" height="2" rx="1" fill="url(#accent)" opacity="0" class="scan" filter="url(#glow)"/>
+  <text x="42" y="52" class="eyebrow reveal" style="--delay:.16s">SELECTED BUILDS / RESEARCH → CODE</text>
+
+  <g class="reveal" style="--delay:0.12s">
+    <rect x="34" y="84" width="550" height="166" rx="17" class="panel"/>
+    <rect x="34" y="84" width="5" height="166" rx="2.5" fill="url(#accent)"/>
+    <text x="58" y="115" class="eyebrow">QUANTUM</text>
+    <text x="58" y="147" class="heading">quantum-algorithms-qiskit</text>
+    <text x="58" y="176" class="body"><tspan x="58" dy="0">Fundamental quantum algorithms and circuits implemented with</tspan><tspan x="58" dy="21">Qiskit.</tspan></text>
+    <text x="58" y="229" class="small">Jupyter Notebook</text>
+    <text x="560" y="229" fill="#29e6f2" font-size="12" text-anchor="end">theory → circuits → simulation</text>
+  </g>
+  <g class="reveal" style="--delay:0.21s">
+    <rect x="617" y="84" width="550" height="166" rx="17" class="panel2"/>
+    <rect x="617" y="84" width="5" height="166" rx="2.5" fill="#a78bfa"/>
+    <text x="641" y="115" class="eyebrow">COMPUTER VISION</text>
+    <text x="641" y="147" class="heading">cifar10-cnn-pytorch</text>
+    <text x="641" y="176" class="body"><tspan x="641" dy="0">Deep CNN experiments for CIFAR-10 with a reproducible</tspan><tspan x="641" dy="21">training pipeline.</tspan></text>
+    <text x="641" y="229" class="small">Python</text>
+    <text x="1143" y="229" fill="#29e6f2" font-size="12" text-anchor="end">paper → experiments → code</text>
+  </g>
+  <g class="reveal" style="--delay:0.30s">
+    <rect x="34" y="278" width="550" height="166" rx="17" class="panel"/>
+    <rect x="34" y="278" width="5" height="166" rx="2.5" fill="url(#accent)"/>
+    <text x="58" y="309" class="eyebrow">FROM SCRATCH</text>
+    <text x="58" y="341" class="heading">mnist-neural-network-numpy</text>
+    <text x="58" y="370" class="body"><tspan x="58" dy="0">Neural network with manual forward and backpropagation using</tspan><tspan x="58" dy="21">NumPy.</tspan></text>
+    <text x="58" y="423" class="small">Python</text>
+    <text x="560" y="423" fill="#29e6f2" font-size="12" text-anchor="end">equations → implementation → validation</text>
+  </g>
+  <g class="reveal" style="--delay:0.39s">
+    <rect x="617" y="278" width="550" height="166" rx="17" class="panel"/>
+    <rect x="617" y="278" width="5" height="166" rx="2.5" fill="#a78bfa"/>
+    <text x="641" y="309" class="eyebrow">SCIENTIFIC COMPUTING</text>
+    <text x="641" y="341" class="heading">nbody-sim</text>
+    <text x="641" y="370" class="body"><tspan x="641" dy="0">N-body simulation with multiple integrators and</tspan><tspan x="641" dy="21">conservation-law checks.</tspan></text>
+    <text x="641" y="423" class="small">Python</text>
+    <text x="1143" y="423" fill="#29e6f2" font-size="12" text-anchor="end">physics → numerics → visualization</text>
+  </g>
+  <g class="reveal" style="--delay:0.48s">
+    <rect x="34" y="472" width="550" height="166" rx="17" class="panel2"/>
+    <rect x="34" y="472" width="5" height="166" rx="2.5" fill="url(#accent)"/>
+    <text x="58" y="503" class="eyebrow">DIGITAL HARDWARE</text>
+    <text x="58" y="535" class="heading">digital-systems-labs</text>
+    <text x="58" y="564" class="body"><tspan x="58" dy="0">Synthesizable VHDL designs including arithmetic and</tspan><tspan x="58" dy="21">control-path modules.</tspan></text>
+    <text x="58" y="617" class="small">VHDL</text>
+    <text x="560" y="617" fill="#29e6f2" font-size="12" text-anchor="end">architecture → RTL → synthesis</text>
+  </g>
+  <g class="reveal" style="--delay:0.57s">
+    <rect x="617" y="472" width="550" height="166" rx="17" class="panel"/>
+    <rect x="617" y="472" width="5" height="166" rx="2.5" fill="#a78bfa"/>
+    <text x="641" y="503" class="eyebrow">SYSTEMS</text>
+    <text x="641" y="535" class="heading">z80-toolchain</text>
+    <text x="641" y="564" class="body"><tspan x="641" dy="0">A C++ Z80 toolchain with assembler, linker, loader and</tspan><tspan x="641" dy="21">emulator.</tspan></text>
+    <text x="641" y="617" class="small">C++</text>
+    <text x="1143" y="617" fill="#29e6f2" font-size="12" text-anchor="end">ISA → toolchain → emulation</text>
+  </g></svg>

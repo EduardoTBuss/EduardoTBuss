@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="406" viewBox="0 0 1200 406" role="img" aria-labelledby="title desc">
+  <title id="title">Publications</title>
+  <desc id="desc">Publication entries with explicit review status.</desc>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .eyebrow { fill: #29e6f2; font-size: 13px; font-weight: 700; letter-spacing: 2px; }
+    .title { fill: #e6f4ff; font-size: 36px; font-weight: 720; letter-spacing: -1px; }
+    .heading { fill: #e6f4ff; font-size: 22px; font-weight: 700; }
+    .subheading { fill: #a78bfa; font-size: 16px; font-weight: 700; letter-spacing: .7px; }
+    .body { fill: #91a7bd; font-size: 15px; }
+    .small { fill: #91a7bd; font-size: 12px; }
+    .code { fill: #29e6f2; font-size: 13px; }
+    .panel { fill: #091326; stroke: #17375a; stroke-width: 1.2; fill-opacity: 0; stroke-dasharray: 1700; stroke-dashoffset: 1700; animation: panelBuild 1.05s ease forwards; animation-delay: calc(var(--section-delay, 0s) + var(--panel-delay, .25s)); }
+    .panel2 { fill: #0c1930; stroke: #17375a; stroke-width: 1.2; fill-opacity: 0; stroke-dasharray: 1700; stroke-dashoffset: 1700; animation: panelBuild 1.05s ease forwards; animation-delay: calc(var(--section-delay, 0s) + var(--panel-delay, .25s)); }
+    .reveal { opacity: 0; transform: translateY(8px); animation: reveal .72s ease forwards; animation-delay: calc(var(--section-delay, 0s) + var(--delay, 0s)); }
+    .draw { stroke-dasharray: var(--length, 500); stroke-dashoffset: var(--length, 500); animation: draw 1.4s ease forwards; animation-delay: calc(var(--section-delay, 0s) + var(--delay, .2s)); }
+    .pulse { animation: pulse 2.5s ease-in-out infinite; animation-delay: calc(var(--section-delay, 0s) + var(--delay, 0s)); transform-box: fill-box; transform-origin: center; }
+    .signal { stroke-dasharray: 4 14; animation: signal 2.8s linear infinite; animation-delay: var(--section-delay, 0s); }
+    .float { animation: float 4s ease-in-out infinite; animation-delay: var(--section-delay, 0s); }
+    .gridBoot { opacity: 0; animation: gridBoot 1.4s ease forwards; animation-delay: var(--section-delay, 0s); }
+    .borderBoot { stroke-dasharray: 3200; stroke-dashoffset: 3200; animation: draw 1.35s ease forwards; animation-delay: var(--section-delay, 0s); }
+    .cornerBoot { stroke-dasharray: 420; stroke-dashoffset: 420; animation: draw .85s ease forwards; animation-delay: calc(var(--section-delay, 0s) + .12s); }
+    .scan { animation: scan 2.5s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--section-delay, 0s); }
+    .layerNode { transform-box: fill-box; transform-origin: center; animation: layerNode 4s ease-in-out infinite; animation-delay: calc(var(--section-delay, 0s) + var(--node-delay, 0s)); }
+    .connectionStage { animation: connectionGlow 4s ease-in-out infinite; animation-delay: calc(var(--section-delay, 0s) + var(--edge-delay, 0s)); }
+    .traveler { filter: url(#glow); }
+    @keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes panelBuild { 0% { fill-opacity: 0; stroke-dashoffset: 1700; } 62% { fill-opacity: 0; stroke-dashoffset: 0; } 100% { fill-opacity: 1; stroke-dashoffset: 0; } }
+    @keyframes pulse { 0%, 100% { opacity: .45; transform: scale(.85); } 50% { opacity: 1; transform: scale(1.18); } }
+    @keyframes signal { to { stroke-dashoffset: -72; } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    @keyframes gridBoot { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes scan { 0% { transform: translateY(-4px); opacity: 0; } 10% { opacity: .9; } 88% { opacity: .55; } 100% { transform: translateY(406px); opacity: 0; } }
+    @keyframes layerNode { 0%, 18%, 100% { opacity: .42; transform: scale(.82); } 27%, 42% { opacity: 1; transform: scale(1.45); } 55% { opacity: .72; transform: scale(1); } }
+    @keyframes connectionGlow { 0%, 18%, 100% { opacity: .18; } 25%, 48% { opacity: .95; } 62% { opacity: .35; } }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .draw, .pulse, .signal, .float, .gridBoot, .borderBoot, .cornerBoot, .scan, .layerNode, .connectionStage, .panel, .panel2 { animation-duration: .001ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; animation-fill-mode: both !important; }
+      .traveler { display: none; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050a16"/><stop offset=".52" stop-color="#061326"/><stop offset="1" stop-color="#09091b"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#29e6f2"/><stop offset=".52" stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <radialGradient id="orb"><stop stop-color="#29e6f2" stop-opacity=".17"/><stop offset=".7" stop-color="#a78bfa" stop-opacity=".06"/><stop offset="1" stop-color="#050a16" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#123050" stroke-opacity=".27" stroke-width="1"/></pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="1200" height="406" rx="22" fill="url(#bg)"/>
+  <rect width="1200" height="406" rx="22" fill="url(#grid)" class="gridBoot"/>
+  <rect x="1" y="1" width="1198" height="404" rx="21" fill="none" stroke="#18395d" class="borderBoot"/>
+  <path d="M24 12H150 M12 24V90 M1176 394H1050 M1188 382V316" stroke="url(#accent)" stroke-width="2" opacity=".7" class="cornerBoot"/>
+  <rect x="18" y="0" width="1164" height="2" rx="1" fill="url(#accent)" opacity="0" class="scan" filter="url(#glow)"/>
+
+  <text x="42" y="52" class="eyebrow reveal" style="--delay:.16s">PUBLICATIONS / TALKS / WRITING</text>
+  <text x="1158" y="52" fill="#d56dff" font-size="12" text-anchor="end" class="reveal" style="--delay:.28s">LIST UNDER REVIEW · EDIT data/publications.json</text>
+
+    <g class="reveal" style="--delay:0.18s">
+      <rect x="48" y="82" width="1104" height="68" rx="12" fill="#09162a" stroke="#183b5f"/>
+      <text x="72" y="111" fill="#a78bfa" font-size="15" font-weight="700">2025</text>
+      <text x="132" y="109" fill="#e6f4ff" font-size="15" font-weight="650">Bernstein–Vazirani Algorithm: Quantum Analysis and Qiskit Implementation</text>
+      <text x="132" y="133" class="small">WECIQ 2025</text>
+      <rect x="938" y="98" width="190" height="28" rx="14" fill="#171334" stroke="#513d80"/>
+      <text x="1033" y="117" fill="#a78bfa" font-size="11" text-anchor="middle">LISTED · REVIEW PENDING</text>
+    </g>
+    <g class="reveal" style="--delay:0.30s">
+      <rect x="48" y="164" width="1104" height="68" rx="12" fill="#09162a" stroke="#183b5f"/>
+      <text x="72" y="193" fill="#a78bfa" font-size="15" font-weight="700">2025</text>
+      <text x="132" y="191" fill="#e6f4ff" font-size="15" font-weight="650">CNN Architecture Assessment: Exploring Depth, Width, and Kernel Size for…</text>
+      <text x="132" y="215" class="small">ERAMIA-RS 2025</text>
+      <rect x="938" y="180" width="190" height="28" rx="14" fill="#171334" stroke="#513d80"/>
+      <text x="1033" y="199" fill="#a78bfa" font-size="11" text-anchor="middle">LISTED · REVIEW PENDING</text>
+    </g>
+    <g class="reveal" style="--delay:0.42s">
+      <rect x="48" y="246" width="1104" height="68" rx="12" fill="#09162a" stroke="#183b5f"/>
+      <text x="72" y="275" fill="#a78bfa" font-size="15" font-weight="700">2025</text>
+      <text x="132" y="273" fill="#e6f4ff" font-size="15" font-weight="650">Analysis of the Mach–Zehnder Interferometer Algorithm with Qiskit…</text>
+      <text x="132" y="297" class="small">WEIT 2025</text>
+      <rect x="938" y="262" width="190" height="28" rx="14" fill="#171334" stroke="#513d80"/>
+      <text x="1033" y="281" fill="#a78bfa" font-size="11" text-anchor="middle">LISTED · REVIEW PENDING</text>
+    </g>
+</svg>

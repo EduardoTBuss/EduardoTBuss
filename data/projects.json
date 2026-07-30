@@ -1,0 +1,50 @@
+[
+  {
+    "name": "quantum-algorithms-qiskit",
+    "category": "QUANTUM",
+    "description": "Fundamental quantum algorithms and circuits implemented with Qiskit.",
+    "language": "Jupyter Notebook",
+    "connection": "theory → circuits → simulation",
+    "url": "https://github.com/EduardoTBuss/quantum-algorithms-qiskit"
+  },
+  {
+    "name": "cifar10-cnn-pytorch",
+    "category": "COMPUTER VISION",
+    "description": "Deep CNN experiments for CIFAR-10 with a reproducible training pipeline.",
+    "language": "Python",
+    "connection": "paper → experiments → code",
+    "url": "https://github.com/EduardoTBuss/cifar10-cnn-pytorch"
+  },
+  {
+    "name": "mnist-neural-network-numpy",
+    "category": "FROM SCRATCH",
+    "description": "Neural network with manual forward and backpropagation using NumPy.",
+    "language": "Python",
+    "connection": "equations → implementation → validation",
+    "url": "https://github.com/EduardoTBuss/mnist-neural-network-numpy"
+  },
+  {
+    "name": "nbody-sim",
+    "category": "SCIENTIFIC COMPUTING",
+    "description": "N-body simulation with multiple integrators and conservation-law checks.",
+    "language": "Python",
+    "connection": "physics → numerics → visualization",
+    "url": "https://github.com/EduardoTBuss/nbody-sim"
+  },
+  {
+    "name": "digital-systems-labs",
+    "category": "DIGITAL HARDWARE",
+    "description": "Synthesizable VHDL designs including arithmetic and control-path modules.",
+    "language": "VHDL",
+    "connection": "architecture → RTL → synthesis",
+    "url": "https://github.com/EduardoTBuss/digital-systems-labs"
+  },
+  {
+    "name": "z80-toolchain",
+    "category": "SYSTEMS",
+    "description": "A C++ Z80 toolchain with assembler, linker, loader and emulator.",
+    "language": "C++",
+    "connection": "ISA → toolchain → emulation",
+    "url": "https://github.com/EduardoTBuss/z80-toolchain"
+  }
+]

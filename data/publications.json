@@ -1,0 +1,27 @@
+{
+  "needs_review": true,
+  "note": "Initial entries came from the previous profile README. Update titles, authors, status, venue and links before treating this as the definitive publication list.",
+  "items": [
+    {
+      "year": 2025,
+      "title": "Bernstein–Vazirani Algorithm: Quantum Analysis and Qiskit Implementation",
+      "venue": "WECIQ 2025",
+      "status": "listed · review pending",
+      "url": ""
+    },
+    {
+      "year": 2025,
+      "title": "CNN Architecture Assessment: Exploring Depth, Width, and Kernel Size for Image Classification",
+      "venue": "ERAMIA-RS 2025",
+      "status": "listed · review pending",
+      "url": ""
+    },
+    {
+      "year": 2025,
+      "title": "Analysis of the Mach–Zehnder Interferometer Algorithm with Qiskit Simulation",
+      "venue": "WEIT 2025",
+      "status": "listed · review pending",
+      "url": ""
+    }
+  ]
+}
