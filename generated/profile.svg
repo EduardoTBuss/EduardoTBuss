@@ -1,0 +1,321 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1220" viewBox="0 0 1400 1220" role="img" aria-labelledby="dashboard-title dashboard-desc">
+  <title id="dashboard-title">Eduardo Timm Buss — adaptive research dashboard</title>
+  <desc id="dashboard-desc">A responsive horizontal scientific profile with one quantum machine-learning circuit, fuzzy inference, layer-by-layer neural propagation, projects, publications and GitHub activity.</desc>
+  <style>
+    :root { --bg:#040916; --bg2:#081326; --panel:#09162a; --inner:#0d1d35; --text:#e8f4ff; --muted:#91a8bd; --line:#1a4267; --grid:#143656; --cyan:#29e6f2; --blue:#38bdf8; --purple:#a78bfa; --magenta:#d56dff; --green:#52e0a4; }
+    text { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace; }
+    .bg { fill:var(--bg); } .grid { opacity:0; animation:gridIn 1.8s ease forwards; }
+    .panel { fill:var(--panel); stroke:var(--line); stroke-width:1.2; stroke-opacity:.68; fill-opacity:0; stroke-dasharray:2400; stroke-dashoffset:2400; animation:panelBuild 1.45s ease forwards; animation-delay:var(--d,0s); }
+    .inner { fill:var(--inner); stroke:var(--line); stroke-width:1; }
+    .reveal { opacity:0; transform:translateY(7px); animation:reveal .82s ease forwards; animation-delay:var(--d,0s); }
+    .trace { stroke-dasharray:var(--len,900); stroke-dashoffset:var(--len,900); animation:trace 1.9s ease forwards; animation-delay:var(--d,0s); }
+    .eyebrow { fill:var(--cyan); font-size:13px; font-weight:750; letter-spacing:1.8px; }
+    .name { fill:var(--text); font-size:34px; font-weight:760; }
+    .handle { fill:var(--purple); font-size:19px; font-weight:700; }
+    .heading { fill:var(--text); font-size:20px; font-weight:720; }
+    .subheading { fill:var(--purple); font-size:16px; font-weight:720; }
+    .body { fill:var(--muted); font-size:14px; } .small { fill:var(--muted); font-size:12px; } .tiny { fill:var(--muted); font-size:10px; }
+    .code { fill:var(--cyan); font-size:12px; } .itemTitle { fill:var(--text); font-size:14px; font-weight:680; }
+    .year { fill:var(--purple); font-size:13px; font-weight:750; } .pubTitle { fill:var(--text); font-size:12px; font-weight:680; } .status,.researchStatus { fill:var(--purple); font-size:9px; font-weight:700; letter-spacing:.5px; }
+    .cardTag { fill:var(--cyan); font-size:10px; font-weight:750; letter-spacing:1px; } .cardTitle { fill:var(--text); font-size:15px; font-weight:720; } .cardLink { fill:var(--cyan); font-size:10px; }
+    .edgeStage { stroke:var(--line); stroke-width:1; opacity:0; animation:edgeSweep 4.8s ease-in-out infinite both; animation-delay:calc(1.5s + var(--stage)); }
+    .edgeBack { stroke:var(--purple); stroke-width:1.2; opacity:0; animation:edgeBack 6.2s ease-in-out infinite both; animation-delay:calc(4.6s + var(--stage)); }
+    .layerStage { transform-box:fill-box; transform-origin:center; opacity:0; animation:layerSweep 4.8s ease-in-out infinite both; animation-delay:calc(1.5s + var(--stage)); }
+    .gatePulse { animation:gatePulse 6s ease-in-out infinite; animation-delay:var(--pulse,0s); }
+    .sphereAura { animation:sphereAura 4.6s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+    .orbit { stroke-dasharray:7 11; animation:orbitDash 7s linear infinite; }
+    .dust { pointer-events:none; transform-box:fill-box; transform-origin:center; animation-duration:var(--dur); animation-delay:var(--delay); animation-timing-function:ease-in-out; animation-iteration-count:infinite; animation-direction:alternate; }
+    .dustA { animation-name:dustA; } .dustB { animation-name:dustB; } .dustC { animation-name:dustC; }
+    .flowNode { fill:var(--inner); stroke:var(--cyan); stroke-width:1; } .chip { fill:var(--inner); stroke:var(--line); stroke-width:1; }
+    .signal { stroke-dasharray:5 12; animation:signal 3.2s linear infinite; }
+    .scan { animation:scan 6s linear forwards; } .bus { stroke-dasharray:5200; stroke-dashoffset:5200; animation:trace 6s linear forwards; }
+    @keyframes gridIn { to { opacity:.75; } } @keyframes reveal { to { opacity:1; transform:translateY(0); } }
+    @keyframes trace { to { stroke-dashoffset:0; } }
+    @keyframes panelBuild { 0% { fill-opacity:0; stroke-dashoffset:2400; } 58% { fill-opacity:0; stroke-dashoffset:0; } 100% { fill-opacity:.72; stroke-dashoffset:0; } }
+    @keyframes edgeSweep { 0%,18% { opacity:0; } 28%,48% { opacity:.9; stroke:var(--cyan); } 62%,100% { opacity:.16; } }
+    @keyframes edgeBack { 0%,12% { opacity:0; } 18%,28% { opacity:.82; } 38%,100% { opacity:0; } }
+    @keyframes layerSweep { 0%,18% { opacity:0; transform:scale(.88); } 28%,48% { opacity:1; transform:scale(1.3); filter:url(#glow); } 62%,100% { opacity:.38; transform:scale(1); } }
+    @keyframes gatePulse { 0%,64%,100% { filter:none; } 70%,80% { filter:url(#glow); stroke-width:2; } }
+    @keyframes sphereAura { 0%,100% { opacity:.5; transform:scale(.98); } 50% { opacity:1; transform:scale(1.02); } }
+    @keyframes orbitDash { to { stroke-dashoffset:-180; } }
+    @keyframes dustA { 0% { transform:translate(-18px,2px); } 34% { transform:translate(16px,-5px); } 71% { transform:translate(57px,7px); } 100% { transform:translate(102px,-3px); } }
+    @keyframes dustB { 0% { transform:translate(-12px,-4px); } 29% { transform:translate(22px,8px); } 63% { transform:translate(64px,-9px); } 100% { transform:translate(91px,5px); } }
+    @keyframes dustC { 0% { transform:translate(-25px,6px); } 38% { transform:translate(31px,-11px); } 76% { transform:translate(73px,4px); } 100% { transform:translate(116px,-7px); } }
+    @keyframes signal { to { stroke-dashoffset:-68; } } @keyframes scan { 0% { transform:translateY(0); opacity:0; } 7% { opacity:.8; } 94% { opacity:.3; } 100% { transform:translateY(1220px); opacity:0; } }
+    @media (prefers-color-scheme:light) { :root { --bg:#f3f7fd; --bg2:#e6eef9; --panel:#ffffff; --inner:#f2f7fc; --text:#132238; --muted:#4c6078; --line:#9ebbd2; --grid:#bfd2e3; --cyan:#007c91; --blue:#0369a1; --purple:#6d28d9; --magenta:#a21caf; --green:#087f5b; } }
+    @media (max-width:900px) { .fine { display:none; } .body { font-size:15px; } .small { font-size:13px; } .cardTitle { font-size:16px; } }
+    @media (prefers-reduced-motion:reduce) { .grid,.panel,.reveal,.trace,.edgeStage,.edgeBack,.layerStage,.gatePulse,.sphereAura,.orbit,.signal,.scan,.bus { animation-duration:.001ms!important; animation-delay:0s!important; animation-iteration-count:1!important; animation-fill-mode:both!important; } .dust { animation:none!important; opacity:.08!important; } }
+  </style>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="var(--bg)"/><stop offset=".5" stop-color="var(--bg2)"/><stop offset="1" stop-color="var(--bg)"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="var(--cyan)"/><stop offset=".55" stop-color="var(--blue)"/><stop offset="1" stop-color="var(--purple)"/></linearGradient>
+    <linearGradient id="lowFill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="var(--purple)" stop-opacity=".55"/><stop offset="1" stop-color="var(--purple)" stop-opacity=".03"/></linearGradient>
+    <linearGradient id="midFill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="var(--cyan)" stop-opacity=".5"/><stop offset="1" stop-color="var(--cyan)" stop-opacity=".03"/></linearGradient>
+    <linearGradient id="highFill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="var(--magenta)" stop-opacity=".5"/><stop offset="1" stop-color="var(--magenta)" stop-opacity=".03"/></linearGradient>
+    <radialGradient id="sphereCore"><stop stop-color="var(--cyan)" stop-opacity=".14"/><stop offset=".52" stop-color="var(--blue)" stop-opacity=".06"/><stop offset="1" stop-color="var(--purple)" stop-opacity="0"/></radialGradient>
+    <pattern id="dashboardGrid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="var(--grid)" stroke-opacity=".24"/></pattern>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="var(--cyan)"/></marker>
+  </defs>
+  <rect width="1400" height="1220" fill="url(#background)"/>
+  <rect width="1400" height="1220" fill="url(#dashboardGrid)" class="grid"/>
+  <!-- Layer 1: translucent module surfaces -->
+  <g aria-label="dashboard panel surfaces">
+    <rect x="30" y="30" width="390" height="250" rx="17" class="panel" style="--d:.12s"/>
+    <rect x="435" y="30" width="420" height="405" rx="17" class="panel" style="--d:.32s"/>
+    <rect x="870" y="30" width="500" height="260" rx="17" class="panel" style="--d:.5s"/>
+    <rect x="30" y="295" width="390" height="420" rx="17" class="panel" style="--d:.75s"/>
+    <rect x="870" y="305" width="500" height="410" rx="17" class="panel" style="--d:.92s"/>
+    <rect x="435" y="450" width="420" height="265" rx="17" class="panel" style="--d:1.2s"/>
+    <rect x="30" y="730" width="390" height="335" rx="17" class="panel" style="--d:1.9s"/>
+    <rect x="435" y="730" width="935" height="335" rx="17" class="panel" style="--d:2.15s"/>
+    <rect x="30" y="1080" width="1340" height="110" rx="17" class="panel" style="--d:3.65s"/>
+  </g>
+  <!-- Layer 2: ambient particles above surfaces, below all meaningful content -->
+  <g aria-hidden="true"><ellipse cx="195" cy="116" rx="1.60" ry="0.44" fill="#38bdf8" opacity="0.217" class="dust dustB" style="--dur:15s;--delay:-15s"/><ellipse cx="254" cy="162" rx="1.75" ry="0.38" fill="#38bdf8" opacity="0.238" class="dust dustC" style="--dur:13s;--delay:-29s"/><ellipse cx="259" cy="237" rx="1.72" ry="0.39" fill="#38bdf8" opacity="0.234" class="dust dustC" style="--dur:13s;--delay:-9s"/><ellipse cx="320" cy="400" rx="1.52" ry="0.47" fill="#38bdf8" opacity="0.207" class="dust dustA" style="--dur:17s;--delay:-16s"/><ellipse cx="502" cy="689" rx="1.18" ry="0.59" fill="#38bdf8" opacity="0.160" class="dust dustC" style="--dur:22s;--delay:-21s"/><ellipse cx="766" cy="1082" rx="0.77" ry="0.75" fill="#38bdf8" opacity="0.103" class="dust dustA" style="--dur:29s;--delay:-24s"/><ellipse cx="1006" cy="308" rx="1.14" ry="0.61" fill="#38bdf8" opacity="0.154" class="dust dustA" style="--dur:23s;--delay:-11s"/><ellipse cx="1137" cy="742" rx="1.49" ry="0.48" fill="#38bdf8" opacity="0.202" class="dust dustB" style="--dur:17s;--delay:-28s"/><ellipse cx="1162" cy="1176" rx="1.70" ry="0.40" fill="#38bdf8" opacity="0.232" class="dust dustC" style="--dur:13s;--delay:-13s"/><ellipse cx="1177" cy="450" rx="1.75" ry="0.38" fill="#38bdf8" opacity="0.239" class="dust dustC" style="--dur:13s;--delay:-24s"/><ellipse cx="1282" cy="1044" rx="1.62" ry="0.43" fill="#38bdf8" opacity="0.221" class="dust dustA" style="--dur:15s;--delay:-2s"/><ellipse cx="113" cy="550" rx="1.34" ry="0.54" fill="#38bdf8" opacity="0.182" class="dust dustB" style="--dur:20s;--delay:-8s"/><ellipse cx="381" cy="139" rx="0.95" ry="0.68" fill="#38bdf8" opacity="0.128" class="dust dustC" style="--dur:26s;--delay:-11s"/><ellipse cx="586" cy="963" rx="0.97" ry="0.68" fill="#38bdf8" opacity="0.131" class="dust dustC" style="--dur:26s;--delay:-23s"/><ellipse cx="669" cy="565" rx="1.35" ry="0.53" fill="#38bdf8" opacity="0.184" class="dust dustC" style="--dur:19s;--delay:-10s"/><ellipse cx="677" cy="183" rx="1.63" ry="0.43" fill="#38bdf8" opacity="0.222" class="dust dustA" style="--dur:15s;--delay:-26s"/><ellipse cx="717" cy="1089" rx="1.75" ry="0.38" fill="#38bdf8" opacity="0.239" class="dust dustA" style="--dur:13s;--delay:-8s"/><ellipse cx="870" cy="904" rx="1.70" ry="0.40" fill="#38bdf8" opacity="0.231" class="dust dustC" style="--dur:14s;--delay:-18s"/><ellipse cx="1123" cy="833" rx="1.47" ry="0.48" fill="#38bdf8" opacity="0.200" class="dust dustA" style="--dur:17s;--delay:-25s"/><ellipse cx="1379" cy="821" rx="1.12" ry="0.62" fill="#38bdf8" opacity="0.152" class="dust dustA" style="--dur:23s;--delay:-30s"/><ellipse cx="146" cy="814" rx="0.79" ry="0.74" fill="#38bdf8" opacity="0.106" class="dust dustB" style="--dur:29s;--delay:-3s"/><ellipse cx="190" cy="800" rx="1.20" ry="0.59" fill="#38bdf8" opacity="0.163" class="dust dustB" style="--dur:22s;--delay:-22s"/><ellipse cx="197" cy="823" rx="1.53" ry="0.46" fill="#38bdf8" opacity="0.208" class="dust dustB" style="--dur:16s;--delay:-8s"/><ellipse cx="275" cy="944" rx="1.72" ry="0.39" fill="#38bdf8" opacity="0.235" class="dust dustB" style="--dur:13s;--delay:-23s"/><ellipse cx="474" cy="1190" rx="1.74" ry="0.38" fill="#38bdf8" opacity="0.238" class="dust dustC" style="--dur:13s;--delay:-3s"/><ellipse cx="742" cy="322" rx="1.59" ry="0.44" fill="#38bdf8" opacity="0.216" class="dust dustA" style="--dur:15s;--delay:-11s"/><ellipse cx="969" cy="700" rx="1.28" ry="0.56" fill="#38bdf8" opacity="0.174" class="dust dustC" style="--dur:21s;--delay:-17s"/><ellipse cx="1081" cy="1072" rx="0.88" ry="0.71" fill="#38bdf8" opacity="0.119" class="dust dustB" style="--dur:27s;--delay:-20s"/><ellipse cx="1097" cy="236" rx="1.03" ry="0.65" fill="#38bdf8" opacity="0.140" class="dust dustC" style="--dur:25s;--delay:-3s"/><ellipse cx="1120" cy="675" rx="1.41" ry="0.51" fill="#38bdf8" opacity="0.191" class="dust dustB" style="--dur:18s;--delay:-21s"/><ellipse cx="1244" cy="15" rx="1.66" ry="0.41" fill="#38bdf8" opacity="0.227" class="dust dustB" style="--dur:14s;--delay:-6s"/><ellipse cx="89" cy="689" rx="1.76" ry="0.38" fill="#38bdf8" opacity="0.239" class="dust dustA" style="--dur:13s;--delay:-18s"/><ellipse cx="354" cy="225" rx="1.67" ry="0.41" fill="#38bdf8" opacity="0.228" class="dust dustB" style="--dur:14s;--delay:-28s"/><ellipse cx="541" cy="987" rx="1.42" ry="0.50" fill="#38bdf8" opacity="0.194" class="dust dustC" style="--dur:18s;--delay:-3s"/><ellipse cx="608" cy="528" rx="1.05" ry="0.64" fill="#38bdf8" opacity="0.143" class="dust dustC" style="--dur:24s;--delay:-7s"/><ellipse cx="613" cy="92" rx="0.86" ry="0.72" fill="#38bdf8" opacity="0.116" class="dust dustA" style="--dur:28s;--delay:-15s"/><ellipse cx="667" cy="953" rx="1.26" ry="0.56" fill="#38bdf8" opacity="0.171" class="dust dustB" style="--dur:21s;--delay:-2s"/><ellipse cx="839" cy="727" rx="1.57" ry="0.45" fill="#38bdf8" opacity="0.214" class="dust dustA" style="--dur:16s;--delay:-19s"/><ellipse cx="1100" cy="608" rx="1.74" ry="0.38" fill="#38bdf8" opacity="0.237" class="dust dustB" style="--dur:13s;--delay:-2s"/><ellipse cx="1347" cy="539" rx="1.73" ry="0.39" fill="#38bdf8" opacity="0.236" class="dust dustA" style="--dur:13s;--delay:-13s"/><ellipse cx="94" cy="469" rx="1.55" ry="0.46" fill="#38bdf8" opacity="0.210" class="dust dustC" style="--dur:16s;--delay:-21s"/><ellipse cx="126" cy="396" rx="1.22" ry="0.58" fill="#38bdf8" opacity="0.166" class="dust dustA" style="--dur:22s;--delay:-25s"/><ellipse cx="137" cy="370" rx="0.81" ry="0.73" fill="#38bdf8" opacity="0.109" class="dust dustC" style="--dur:28s;--delay:-29s"/><ellipse cx="233" cy="449" rx="1.10" ry="0.63" fill="#38bdf8" opacity="0.149" class="dust dustB" style="--dur:24s;--delay:-14s"/><ellipse cx="448" cy="653" rx="1.46" ry="0.49" fill="#38bdf8" opacity="0.198" class="dust dustC" style="--dur:18s;--delay:-1s"/><ellipse cx="717" cy="944" rx="1.69" ry="0.40" fill="#38bdf8" opacity="0.230" class="dust dustA" style="--dur:14s;--delay:-16s"/><ellipse cx="930" cy="51" rx="1.76" ry="0.38" fill="#38bdf8" opacity="0.239" class="dust dustC" style="--dur:13s;--delay:-28s"/><ellipse cx="1022" cy="360" rx="1.64" ry="0.42" fill="#38bdf8" opacity="0.224" class="dust dustC" style="--dur:14s;--delay:-6s"/><ellipse cx="1032" cy="681" rx="1.37" ry="0.52" fill="#38bdf8" opacity="0.186" class="dust dustB" style="--dur:19s;--delay:-12s"/><ellipse cx="1066" cy="1073" rx="0.99" ry="0.67" fill="#38bdf8" opacity="0.134" class="dust dustA" style="--dur:25s;--delay:-16s"/><ellipse cx="1210" cy="373" rx="0.92" ry="0.69" fill="#38bdf8" opacity="0.125" class="dust dustB" style="--dur:27s;--delay:-26s"/><ellipse cx="66" cy="1001" rx="1.32" ry="0.54" fill="#38bdf8" opacity="0.179" class="dust dustB" style="--dur:20s;--delay:-13s"/><ellipse cx="326" cy="481" rx="1.61" ry="0.43" fill="#38bdf8" opacity="0.219" class="dust dustB" style="--dur:15s;--delay:-30s"/><ellipse cx="494" cy="1181" rx="1.75" ry="0.38" fill="#38bdf8" opacity="0.238" class="dust dustC" style="--dur:13s;--delay:-12s"/><ellipse cx="545" cy="661" rx="1.71" ry="0.40" fill="#38bdf8" opacity="0.233" class="dust dustA" style="--dur:13s;--delay:-23s"/><ellipse cx="550" cy="173" rx="1.50" ry="0.47" fill="#38bdf8" opacity="0.204" class="dust dustB" style="--dur:17s;--delay:-30s"/><ellipse cx="620" cy="992" rx="1.16" ry="0.60" fill="#38bdf8" opacity="0.157" class="dust dustC" style="--dur:23s;--delay:-3s"/><ellipse cx="811" cy="724" rx="0.75" ry="0.76" fill="#38bdf8" opacity="0.100" class="dust dustC" style="--dur:30s;--delay:-7s"/><ellipse cx="1077" cy="556" rx="1.16" ry="0.60" fill="#38bdf8" opacity="0.158" class="dust dustA" style="--dur:23s;--delay:-25s"/><ellipse cx="1311" cy="428" rx="1.50" ry="0.47" fill="#38bdf8" opacity="0.205" class="dust dustB" style="--dur:17s;--delay:-12s"/><ellipse cx="40" cy="295" rx="1.71" ry="0.39" fill="#38bdf8" opacity="0.233" class="dust dustC" style="--dur:13s;--delay:-27s"/><ellipse cx="61" cy="164" rx="1.75" ry="0.38" fill="#38bdf8" opacity="0.238" class="dust dustC" style="--dur:13s;--delay:-7s"/><ellipse cx="79" cy="90" rx="1.61" ry="0.43" fill="#38bdf8" opacity="0.219" class="dust dustB" style="--dur:15s;--delay:-16s"/><ellipse cx="194" cy="128" rx="1.31" ry="0.54" fill="#38bdf8" opacity="0.179" class="dust dustA" style="--dur:20s;--delay:-21s"/><ellipse cx="424" cy="288" rx="0.92" ry="0.69" fill="#38bdf8" opacity="0.124" class="dust dustC" style="--dur:27s;--delay:-25s"/><ellipse cx="691" cy="526" rx="0.99" ry="0.67" fill="#38bdf8" opacity="0.134" class="dust dustC" style="--dur:25s;--delay:-6s"/><ellipse cx="887" cy="783" rx="1.37" ry="0.52" fill="#38bdf8" opacity="0.187" class="dust dustC" style="--dur:19s;--delay:-24s"/><ellipse cx="962" cy="1030" rx="1.65" ry="0.42" fill="#38bdf8" opacity="0.224" class="dust dustB" style="--dur:14s;--delay:-9s"/><ellipse cx="968" cy="85" rx="1.76" ry="0.38" fill="#38bdf8" opacity="0.239" class="dust dustC" style="--dur:13s;--delay:-22s"/><ellipse cx="1015" cy="433" rx="1.69" ry="0.40" fill="#38bdf8" opacity="0.230" class="dust dustC" style="--dur:14s;--delay:-1s"/><ellipse cx="1177" cy="903" rx="1.45" ry="0.49" fill="#38bdf8" opacity="0.198" class="dust dustC" style="--dur:18s;--delay:-8s"/><ellipse cx="43" cy="273" rx="1.09" ry="0.63" fill="#38bdf8" opacity="0.148" class="dust dustC" style="--dur:24s;--delay:-12s"/><ellipse cx="294" cy="909" rx="0.81" ry="0.73" fill="#38bdf8" opacity="0.110" class="dust dustB" style="--dur:28s;--delay:-18s"/><ellipse cx="444" cy="333" rx="1.22" ry="0.58" fill="#38bdf8" opacity="0.166" class="dust dustB" style="--dur:21s;--delay:-6s"/><ellipse cx="481" cy="966" rx="1.55" ry="0.46" fill="#38bdf8" opacity="0.211" class="dust dustC" style="--dur:16s;--delay:-23s"/><ellipse cx="489" cy="428" rx="1.73" ry="0.39" fill="#38bdf8" opacity="0.236" class="dust dustB" style="--dur:13s;--delay:-6s"/><ellipse cx="577" cy="1204" rx="1.74" ry="0.39" fill="#38bdf8" opacity="0.237" class="dust dustA" style="--dur:13s;--delay:-17s"/><ellipse cx="784" cy="894" rx="1.57" ry="0.45" fill="#38bdf8" opacity="0.214" class="dust dustA" style="--dur:16s;--delay:-25s"/><ellipse cx="1053" cy="675" rx="1.26" ry="0.57" fill="#38bdf8" opacity="0.171" class="dust dustA" style="--dur:21s;--delay:-30s"/><ellipse cx="1273" cy="488" rx="0.85" ry="0.72" fill="#38bdf8" opacity="0.115" class="dust dustB" style="--dur:28s;--delay:-3s"/><ellipse cx="1375" cy="292" rx="1.06" ry="0.64" fill="#38bdf8" opacity="0.143" class="dust dustB" style="--dur:24s;--delay:-17s"/><ellipse cx="1387" cy="104" rx="1.43" ry="0.50" fill="#38bdf8" opacity="0.194" class="dust dustA" style="--dur:18s;--delay:-4s"/><ellipse cx="23" cy="1195" rx="1.67" ry="0.41" fill="#38bdf8" opacity="0.228" class="dust dustA" style="--dur:14s;--delay:-20s"/><ellipse cx="158" cy="1192" rx="1.76" ry="0.38" fill="#38bdf8" opacity="0.239" class="dust dustA" style="--dur:13s;--delay:-1s"/><ellipse cx="400" cy="95" rx="1.66" ry="0.41" fill="#38bdf8" opacity="0.226" class="dust dustC" style="--dur:14s;--delay:-11s"/><ellipse cx="663" cy="279" rx="1.40" ry="0.51" fill="#38bdf8" opacity="0.191" class="dust dustA" style="--dur:18s;--delay:-17s"/><ellipse cx="841" cy="474" rx="1.03" ry="0.65" fill="#38bdf8" opacity="0.139" class="dust dustA" style="--dur:25s;--delay:-21s"/><ellipse cx="900" cy="660" rx="0.88" ry="0.71" fill="#38bdf8" opacity="0.119" class="dust dustA" style="--dur:27s;--delay:-29s"/><ellipse cx="904" cy="874" rx="1.28" ry="0.56" fill="#38bdf8" opacity="0.174" class="dust dustA" style="--dur:20s;--delay:-17s"/><ellipse cx="966" cy="1178" rx="1.59" ry="0.44" fill="#38bdf8" opacity="0.216" class="dust dustA" style="--dur:15s;--delay:-2s"/><ellipse cx="1148" cy="395" rx="1.74" ry="0.38" fill="#38bdf8" opacity="0.238" class="dust dustA" style="--dur:13s;--delay:-16s"/><ellipse cx="20" cy="928" rx="1.72" ry="0.39" fill="#38bdf8" opacity="0.235" class="dust dustC" style="--dur:13s;--delay:-27s"/><ellipse cx="260" cy="294" rx="1.53" ry="0.46" fill="#38bdf8" opacity="0.208" class="dust dustA" style="--dur:16s;--delay:-3s"/><ellipse cx="390" cy="868" rx="1.19" ry="0.59" fill="#38bdf8" opacity="0.162" class="dust dustA" style="--dur:22s;--delay:-8s"/><ellipse cx="416" cy="230" rx="0.78" ry="0.74" fill="#38bdf8" opacity="0.105" class="dust dustC" style="--dur:29s;--delay:-11s"/><ellipse cx="430" cy="856" rx="1.12" ry="0.62" fill="#38bdf8" opacity="0.152" class="dust dustC" style="--dur:23s;--delay:-29s"/><ellipse cx="536" cy="378" rx="1.48" ry="0.48" fill="#38bdf8" opacity="0.201" class="dust dustA" style="--dur:17s;--delay:-15s"/><ellipse cx="759" cy="24" rx="1.70" ry="0.40" fill="#38bdf8" opacity="0.232" class="dust dustB" style="--dur:14s;--delay:-30s"/><ellipse cx="1028" cy="966" rx="1.75" ry="0.38" fill="#38bdf8" opacity="0.239" class="dust dustA" style="--dur:13s;--delay:-11s"/><ellipse cx="1232" cy="717" rx="1.63" ry="0.43" fill="#38bdf8" opacity="0.222" class="dust dustB" style="--dur:15s;--delay:-20s"/><ellipse cx="1315" cy="459" rx="1.35" ry="0.53" fill="#38bdf8" opacity="0.183" class="dust dustB" style="--dur:19s;--delay:-26s"/><ellipse cx="1323" cy="217" rx="0.96" ry="0.68" fill="#38bdf8" opacity="0.130" class="dust dustA" style="--dur:26s;--delay:-30s"/><ellipse cx="1363" cy="51" rx="0.95" ry="0.68" fill="#38bdf8" opacity="0.129" class="dust dustB" style="--dur:26s;--delay:-9s"/><ellipse cx="124" cy="6" rx="1.34" ry="0.53" fill="#38bdf8" opacity="0.182" class="dust dustC" style="--dur:20s;--delay:-28s"/><ellipse cx="378" cy="75" rx="1.63" ry="0.43" fill="#38bdf8" opacity="0.221" class="dust dustC" style="--dur:15s;--delay:-13s"/><ellipse cx="633" cy="203" rx="1.75" ry="0.38" fill="#38bdf8" opacity="0.239" class="dust dustC" style="--dur:13s;--delay:-26s"/><ellipse cx="792" cy="335" rx="1.70" ry="0.40" fill="#38bdf8" opacity="0.232" class="dust dustB" style="--dur:13s;--delay:-5s"/><ellipse cx="836" cy="461" rx="1.48" ry="0.48" fill="#38bdf8" opacity="0.202" class="dust dustB" style="--dur:17s;--delay:-12s"/><ellipse cx="843" cy="624" rx="1.13" ry="0.61" fill="#38bdf8" opacity="0.154" class="dust dustB" style="--dur:23s;--delay:-17s"/><ellipse cx="921" cy="886" rx="0.77" ry="0.75" fill="#38bdf8" opacity="0.104" class="dust dustC" style="--dur:29s;--delay:-21s"/><ellipse cx="1120" cy="61" rx="1.19" ry="0.59" fill="#38bdf8" opacity="0.161" class="dust dustB" style="--dur:22s;--delay:-9s"/><ellipse cx="1388" cy="544" rx="1.52" ry="0.47" fill="#38bdf8" opacity="0.207" class="dust dustB" style="--dur:16s;--delay:-26s"/><ellipse cx="224" cy="1062" rx="1.72" ry="0.39" fill="#38bdf8" opacity="0.234" class="dust dustA" style="--dur:13s;--delay:-10s"/><ellipse cx="334" cy="362" rx="1.75" ry="0.38" fill="#38bdf8" opacity="0.238" class="dust dustB" style="--dur:13s;--delay:-21s"/><ellipse cx="351" cy="878" rx="1.59" ry="0.44" fill="#38bdf8" opacity="0.217" class="dust dustC" style="--dur:15s;--delay:-29s"/><ellipse cx="374" cy="244" rx="1.29" ry="0.55" fill="#38bdf8" opacity="0.175" class="dust dustC" style="--dur:20s;--delay:-4s"/><ellipse cx="498" cy="938" rx="0.89" ry="0.70" fill="#38bdf8" opacity="0.121" class="dust dustC" style="--dur:27s;--delay:-7s"/><ellipse cx="735" cy="539" rx="1.02" ry="0.66" fill="#38bdf8" opacity="0.138" class="dust dustB" style="--dur:25s;--delay:-21s"/><ellipse cx="1001" cy="215" rx="1.40" ry="0.51" fill="#38bdf8" opacity="0.190" class="dust dustC" style="--dur:19s;--delay:-8s"/><ellipse cx="1187" cy="1117" rx="1.66" ry="0.42" fill="#38bdf8" opacity="0.226" class="dust dustB" style="--dur:14s;--delay:-24s"/><ellipse cx="1254" cy="797" rx="1.76" ry="0.38" fill="#38bdf8" opacity="0.239" class="dust dustA" style="--dur:13s;--delay:-5s"/><ellipse cx="1259" cy="502" rx="1.68" ry="0.41" fill="#38bdf8" opacity="0.229" class="dust dustA" style="--dur:14s;--delay:-15s"/><ellipse cx="1313" cy="291" rx="1.43" ry="0.50" fill="#38bdf8" opacity="0.195" class="dust dustA" style="--dur:18s;--delay:-21s"/><ellipse cx="94" cy="205" rx="1.07" ry="0.64" fill="#38bdf8" opacity="0.145" class="dust dustA" style="--dur:24s;--delay:-26s"/><ellipse cx="355" cy="227" rx="0.84" ry="0.72" fill="#38bdf8" opacity="0.114" class="dust dustB" style="--dur:28s;--delay:-1s"/><ellipse cx="601" cy="298" rx="1.25" ry="0.57" fill="#38bdf8" opacity="0.169" class="dust dustB" style="--dur:21s;--delay:-20s"/><ellipse cx="740" cy="367" rx="1.57" ry="0.45" fill="#38bdf8" opacity="0.213" class="dust dustA" style="--dur:16s;--delay:-6s"/><ellipse cx="771" cy="434" rx="1.74" ry="0.39" fill="#38bdf8" opacity="0.237" class="dust dustB" style="--dur:13s;--delay:-20s"/><ellipse cx="782" cy="547" rx="1.73" ry="0.39" fill="#38bdf8" opacity="0.236" class="dust dustA" style="--dur:13s;--delay:-0s"/><ellipse cx="879" cy="767" rx="1.55" ry="0.45" fill="#38bdf8" opacity="0.212" class="dust dustC" style="--dur:16s;--delay:-8s"/><ellipse cx="1095" cy="1111" rx="1.23" ry="0.58" fill="#38bdf8" opacity="0.167" class="dust dustA" style="--dur:21s;--delay:-13s"/><ellipse cx="1364" cy="331" rx="0.82" ry="0.73" fill="#38bdf8" opacity="0.111" class="dust dustB" style="--dur:28s;--delay:-16s"/><ellipse cx="184" cy="789" rx="1.08" ry="0.63" fill="#38bdf8" opacity="0.147" class="dust dustA" style="--dur:24s;--delay:-1s"/><ellipse cx="276" cy="26" rx="1.45" ry="0.49" fill="#38bdf8" opacity="0.197" class="dust dustC" style="--dur:18s;--delay:-19s"/><ellipse cx="286" cy="486" rx="1.69" ry="0.41" fill="#38bdf8" opacity="0.230" class="dust dustB" style="--dur:14s;--delay:-3s"/><ellipse cx="320" cy="1019" rx="1.76" ry="0.38" fill="#38bdf8" opacity="0.239" class="dust dustA" style="--dur:13s;--delay:-15s"/><ellipse cx="464" cy="459" rx="1.65" ry="0.42" fill="#38bdf8" opacity="0.225" class="dust dustC" style="--dur:14s;--delay:-24s"/><ellipse cx="712" cy="15" rx="1.38" ry="0.52" fill="#38bdf8" opacity="0.188" class="dust dustA" style="--dur:19s;--delay:-30s"/><ellipse cx="972" cy="848" rx="1.00" ry="0.66" fill="#38bdf8" opacity="0.135" class="dust dustB" style="--dur:25s;--delay:-3s"/><ellipse cx="1140" cy="475" rx="0.91" ry="0.70" fill="#38bdf8" opacity="0.123" class="dust dustC" style="--dur:27s;--delay:-13s"/><ellipse cx="1191" cy="95" rx="1.31" ry="0.55" fill="#38bdf8" opacity="0.178" class="dust dustC" style="--dur:20s;--delay:-0s"/><ellipse cx="1196" cy="959" rx="1.60" ry="0.44" fill="#38bdf8" opacity="0.218" class="dust dustC" style="--dur:15s;--delay:-17s"/><ellipse cx="1266" cy="706" rx="1.75" ry="0.38" fill="#38bdf8" opacity="0.238" class="dust dustB" style="--dur:13s;--delay:-30s"/><ellipse cx="65" cy="578" rx="1.72" ry="0.39" fill="#38bdf8" opacity="0.234" class="dust dustB" style="--dur:13s;--delay:-10s"/><ellipse cx="331" cy="550" rx="1.51" ry="0.47" fill="#38bdf8" opacity="0.206" class="dust dustB" style="--dur:17s;--delay:-17s"/><ellipse cx="565" cy="562" rx="1.17" ry="0.60" fill="#38bdf8" opacity="0.159" class="dust dustC" style="--dur:22s;--delay:-22s"/></g>
+  <rect x="1" y="1" width="1398" height="1218" rx="22" fill="none" stroke="var(--line)" class="bus"/>
+  <rect x="20" y="0" width="1360" height="2" fill="url(#accent)" opacity="0" class="scan" filter="url(#glow)"/>
+
+  <!-- Layer 3: headings, diagrams, cards and data -->
+  <!-- Identity -->
+  <g class="reveal" style="--d:.34s">
+    <text x="54" y="64" class="eyebrow">RESEARCH PROFILE / ONLINE</text>
+    <text x="54" y="111" class="name">Eduardo Timm Buss</text>
+    <text x="54" y="139" class="handle">@EduardoTBuss</text>
+    <text x="54" y="174" class="subheading">Computer Engineering @ UFPel</text>
+    <text x="54" y="199" class="body">Undergraduate Researcher</text>
+    <text x="54" y="229" class="small fine"><tspan x="54" dy="0">I build and study computational systems at the</tspan><tspan x="54" dy="20">intersection of quantum computing, fuzzy logic,…</tspan></text>
+    <text x="54" y="263" class="code">Pelotas, RS, Brazil</text>
+  </g>
+
+  <!-- Bloch state: scientific identity, not a second VQC -->
+  <text x="459" y="64" class="eyebrow reveal" style="--d:.5s">QUANTUM STATE / BLOCH SPHERE</text>
+  <g class="reveal" style="--d:.66s">
+    <circle cx="645" cy="240" r="151" fill="url(#sphereCore)" stroke="var(--cyan)" stroke-opacity=".18" class="sphereAura" filter="url(#glow)"/>
+    <circle cx="645" cy="240" r="145" fill="none" stroke="var(--blue)" stroke-width="1.5" class="trace" style="--len:920;--d:.8s"/>
+    <ellipse cx="645" cy="240" rx="145" ry="47" fill="none" stroke="var(--purple)" stroke-width="1.4" class="trace" style="--len:700;--d:1.05s"/>
+    <ellipse cx="645" cy="240" rx="58" ry="145" fill="none" stroke="var(--cyan)" opacity=".5" class="trace" style="--len:800;--d:1.25s"/>
+    <ellipse cx="645" cy="190" rx="132" ry="34" fill="none" stroke="var(--cyan)" opacity=".22" class="orbit"/>
+    <ellipse cx="645" cy="290" rx="132" ry="34" fill="none" stroke="var(--purple)" opacity=".24" class="orbit"/>
+    <path d="M493 240H797M645 84V396M530 338L760 142" fill="none" stroke="var(--muted)" opacity=".7" class="trace" style="--len:900;--d:1.38s"/>
+    <path d="M645 240H729V141M645 141H729" fill="none" stroke="var(--cyan)" stroke-dasharray="4 7" opacity=".5" class="trace" style="--len:260;--d:1.55s"/>
+    <path d="M645 240L729 141" stroke="var(--cyan)" stroke-width="3" marker-end="url(#arrow)" class="trace" style="--len:140;--d:1.65s" filter="url(#glow)"/>
+    <path d="M702 173A72 72 0 0 0 645 154" fill="none" stroke="var(--magenta)" stroke-width="2" class="trace" style="--len:150;--d:1.85s"/>
+    <circle cx="729" cy="240" r="3" fill="var(--cyan)" opacity=".75"/><circle cx="645" cy="141" r="3" fill="var(--cyan)" opacity=".75"/>
+    <circle cx="729" cy="141" r="7" fill="var(--cyan)" filter="url(#glow)"/>
+    <text x="739" y="137" class="code">|ψ⟩</text><text x="690" y="169" fill="var(--magenta)" font-size="14">θ</text>
+    <text x="633" y="77" class="small">|0⟩</text><text x="633" y="392" class="small">|1⟩</text>
+  </g>
+  <g class="reveal fine" style="--d:2.05s">
+    <rect x="459" y="404" width="88" height="25" rx="12" class="chip"/><text x="503" y="421" class="tiny" text-anchor="middle">QUANTUM</text>
+    <rect x="554" y="404" width="88" height="25" rx="12" class="chip"/><text x="598" y="421" class="tiny" text-anchor="middle">FUZZY</text>
+    <rect x="649" y="404" width="88" height="25" rx="12" class="chip"/><text x="693" y="421" class="tiny" text-anchor="middle">AI / ML</text>
+    <rect x="744" y="404" width="87" height="25" rx="12" class="chip"/><text x="787" y="421" class="tiny" text-anchor="middle">VISION</text>
+  </g>
+
+  <!-- Neural flow: no traveling particles, only staged layer activation -->
+  <text x="894" y="64" class="eyebrow reveal" style="--d:.7s">NEURAL SIGNAL FLOW / LAYER PROPAGATION</text>
+  <g stroke="var(--line)"><g class="edgeStage" style="--stage:0.00s"><path d="M914 105L1030 83"/><path d="M914 105L1030 132"/><path d="M914 105L1030 181"/><path d="M914 105L1030 230"/><path d="M914 160L1030 83"/><path d="M914 160L1030 132"/><path d="M914 160L1030 181"/><path d="M914 160L1030 230"/><path d="M914 215L1030 83"/><path d="M914 215L1030 132"/><path d="M914 215L1030 181"/><path d="M914 215L1030 230"/></g><g class="edgeStage" style="--stage:0.92s"><path d="M1030 83L1160 105"/><path d="M1030 83L1160 160"/><path d="M1030 83L1160 215"/><path d="M1030 132L1160 105"/><path d="M1030 132L1160 160"/><path d="M1030 132L1160 215"/><path d="M1030 181L1160 105"/><path d="M1030 181L1160 160"/><path d="M1030 181L1160 215"/><path d="M1030 230L1160 105"/><path d="M1030 230L1160 160"/><path d="M1030 230L1160 215"/></g><g class="edgeStage" style="--stage:1.84s"><path d="M1160 105L1305 160"/><path d="M1160 160L1305 160"/><path d="M1160 215L1305 160"/></g></g>
+  <g><g class="edgeBack" style="--stage:1.36s"><path d="M914 105L1030 83"/><path d="M914 105L1030 132"/><path d="M914 105L1030 181"/><path d="M914 105L1030 230"/><path d="M914 160L1030 83"/><path d="M914 160L1030 132"/><path d="M914 160L1030 181"/><path d="M914 160L1030 230"/><path d="M914 215L1030 83"/><path d="M914 215L1030 132"/><path d="M914 215L1030 181"/><path d="M914 215L1030 230"/></g><g class="edgeBack" style="--stage:0.68s"><path d="M1030 83L1160 105"/><path d="M1030 83L1160 160"/><path d="M1030 83L1160 215"/><path d="M1030 132L1160 105"/><path d="M1030 132L1160 160"/><path d="M1030 132L1160 215"/><path d="M1030 181L1160 105"/><path d="M1030 181L1160 160"/><path d="M1030 181L1160 215"/><path d="M1030 230L1160 105"/><path d="M1030 230L1160 160"/><path d="M1030 230L1160 215"/></g><g class="edgeBack" style="--stage:0.00s"><path d="M1160 105L1305 160"/><path d="M1160 160L1305 160"/><path d="M1160 215L1305 160"/></g></g>
+  <g>
+        <g class="layerStage" style="--stage:0.00s">
+          <circle cx="914" cy="105" r="13" fill="var(--purple)" opacity=".12"/>
+          <circle cx="914" cy="105" r="6" fill="var(--purple)"/>
+        </g>
+        <g class="layerStage" style="--stage:0.00s">
+          <circle cx="914" cy="160" r="13" fill="var(--purple)" opacity=".12"/>
+          <circle cx="914" cy="160" r="6" fill="var(--purple)"/>
+        </g>
+        <g class="layerStage" style="--stage:0.00s">
+          <circle cx="914" cy="215" r="13" fill="var(--purple)" opacity=".12"/>
+          <circle cx="914" cy="215" r="6" fill="var(--purple)"/>
+        </g>
+        <g class="layerStage" style="--stage:0.92s">
+          <circle cx="1030" cy="83" r="13" fill="var(--purple)" opacity=".12"/>
+          <circle cx="1030" cy="83" r="6" fill="var(--purple)"/>
+        </g>
+        <g class="layerStage" style="--stage:0.92s">
+          <circle cx="1030" cy="132" r="13" fill="var(--purple)" opacity=".12"/>
+          <circle cx="1030" cy="132" r="6" fill="var(--purple)"/>
+        </g>
+        <g class="layerStage" style="--stage:0.92s">
+          <circle cx="1030" cy="181" r="13" fill="var(--purple)" opacity=".12"/>
+          <circle cx="1030" cy="181" r="6" fill="var(--purple)"/>
+        </g>
+        <g class="layerStage" style="--stage:0.92s">
+          <circle cx="1030" cy="230" r="13" fill="var(--purple)" opacity=".12"/>
+          <circle cx="1030" cy="230" r="6" fill="var(--purple)"/>
+        </g>
+        <g class="layerStage" style="--stage:1.84s">
+          <circle cx="1160" cy="105" r="13" fill="var(--cyan)" opacity=".12"/>
+          <circle cx="1160" cy="105" r="6" fill="var(--cyan)"/>
+        </g>
+        <g class="layerStage" style="--stage:1.84s">
+          <circle cx="1160" cy="160" r="13" fill="var(--cyan)" opacity=".12"/>
+          <circle cx="1160" cy="160" r="6" fill="var(--cyan)"/>
+        </g>
+        <g class="layerStage" style="--stage:1.84s">
+          <circle cx="1160" cy="215" r="13" fill="var(--cyan)" opacity=".12"/>
+          <circle cx="1160" cy="215" r="6" fill="var(--cyan)"/>
+        </g>
+        <g class="layerStage" style="--stage:2.76s">
+          <circle cx="1305" cy="160" r="13" fill="var(--cyan)" opacity=".12"/>
+          <circle cx="1305" cy="160" r="6" fill="var(--cyan)"/>
+        </g></g>
+  <text x="1340" y="248" class="tiny reveal fine" text-anchor="end" style="--d:1.25s">FORWARD → REPRESENTATION → OUTPUT</text>
+  <text x="1340" y="264" class="tiny reveal fine" text-anchor="end" style="--d:1.35s" fill="var(--purple)">GRADIENT ← LAYER-WISE UPDATE</text>
+
+  <!-- Current research -->
+  <text x="54" y="329" class="eyebrow reveal" style="--d:.95s">CURRENT RESEARCH</text>
+
+      <g class="reveal" style="--d:1.25s">
+        <circle cx="58" cy="370" r="4" fill="var(--green)"/>
+        <text x="75" y="375" class="itemTitle">Machine learning</text>
+        <text x="75" y="398" class="small fine">Neural networks, numerical validation…</text>
+        <text x="392" y="398" class="researchStatus fine" text-anchor="end" style="fill:var(--green)">ACTIVE</text>
+      </g>
+      <g class="reveal" style="--d:1.43s">
+        <circle cx="58" cy="470" r="4" fill="var(--green)"/>
+        <text x="75" y="475" class="itemTitle">Fuzzy logic</text>
+        <text x="75" y="498" class="small fine">Inference, membership functions and…</text>
+        <text x="392" y="498" class="researchStatus fine" text-anchor="end" style="fill:var(--green)">ACTIVE</text>
+      </g>
+      <g class="reveal" style="--d:1.61s">
+        <circle cx="58" cy="570" r="4" fill="var(--green)"/>
+        <text x="75" y="575" class="itemTitle">Quantum machine learning</text>
+        <text x="75" y="598" class="small fine">Variational circuits, optimization and…</text>
+        <text x="392" y="598" class="researchStatus fine" text-anchor="end" style="fill:var(--green)">ACTIVE</text>
+      </g>
+  <g class="reveal fine" style="--d:2.0s">
+    <path d="M64 677H382" stroke="var(--line)" class="trace" style="--len:320;--d:2.1s"/>
+    <circle cx="64" cy="677" r="6" class="flowNode"/><circle cx="170" cy="677" r="6" class="flowNode"/><circle cx="276" cy="677" r="6" class="flowNode"/><circle cx="382" cy="677" r="6" class="flowNode"/>
+    <text x="64" y="700" class="tiny" text-anchor="middle">THEORY</text><text x="170" y="700" class="tiny" text-anchor="middle">SIMULATE</text><text x="276" y="700" class="tiny" text-anchor="middle">IMPLEMENT</text><text x="382" y="700" class="tiny" text-anchor="middle">VALIDATE</text>
+  </g>
+
+  <!-- One and only VQC -->
+  <text x="894" y="339" class="eyebrow reveal" style="--d:1.12s">QUANTUM MACHINE LEARNING</text>
+  <text x="894" y="363" class="tiny reveal" style="--d:1.2s">VARIATIONAL QUANTUM CIRCUIT (VQC)</text>
+  <text x="1340" y="382" class="tiny reveal fine" text-anchor="end" style="--d:1.3s">ANGLE ENCODING · TRAINABLE ANSATZ · LINEAR CX · ⟨Z⟩</text>
+  <g fill="none" stroke="var(--muted)" stroke-width="1.3">
+    <path d="M910 410H1335M910 478H1335M910 546H1335M910 614H1335" class="trace" style="--len:430;--d:1.45s"/>
+  </g>
+  <g class="reveal" style="--d:1.75s" fill="var(--inner)" stroke="var(--blue)">
+    <rect x="940" y="391" width="58" height="38" rx="7" class="gatePulse" style="--pulse:.0s"/><rect x="940" y="459" width="58" height="38" rx="7" class="gatePulse" style="--pulse:.1s"/><rect x="940" y="527" width="58" height="38" rx="7" class="gatePulse" style="--pulse:.2s"/><rect x="940" y="595" width="58" height="38" rx="7" class="gatePulse" style="--pulse:.3s"/>
+  </g>
+  <g class="reveal" style="--d:1.8s" fill="var(--text)" font-size="10" text-anchor="middle"><text x="969" y="414">Rᵧ(xᵢ)</text><text x="969" y="482">Rᵧ(xᵢ)</text><text x="969" y="550">Rᵧ(xᵢ)</text><text x="969" y="618">Rᵧ(xᵢ)</text></g>
+  <g class="reveal" style="--d:2.05s" fill="var(--inner)" stroke="var(--purple)">
+    <rect x="1030" y="391" width="58" height="38" rx="7" class="gatePulse" style="--pulse:.65s"/><rect x="1030" y="459" width="58" height="38" rx="7" class="gatePulse" style="--pulse:.75s"/><rect x="1030" y="527" width="58" height="38" rx="7" class="gatePulse" style="--pulse:.85s"/><rect x="1030" y="595" width="58" height="38" rx="7" class="gatePulse" style="--pulse:.95s"/>
+    <rect x="1100" y="391" width="58" height="38" rx="7" class="gatePulse" style="--pulse:1.3s"/><rect x="1100" y="459" width="58" height="38" rx="7" class="gatePulse" style="--pulse:1.4s"/><rect x="1100" y="527" width="58" height="38" rx="7" class="gatePulse" style="--pulse:1.5s"/><rect x="1100" y="595" width="58" height="38" rx="7" class="gatePulse" style="--pulse:1.6s"/>
+  </g>
+  <g class="reveal" style="--d:2.12s" fill="var(--text)" font-size="9" text-anchor="middle"><text x="1059" y="414">Rᵧ(θᵢ)</text><text x="1059" y="482">Rᵧ(θᵢ)</text><text x="1059" y="550">Rᵧ(θᵢ)</text><text x="1059" y="618">Rᵧ(θᵢ)</text><text x="1129" y="414">R𝓏(φᵢ)</text><text x="1129" y="482">R𝓏(φᵢ)</text><text x="1129" y="550">R𝓏(φᵢ)</text><text x="1129" y="618">R𝓏(φᵢ)</text></g>
+  <g class="reveal" style="--d:2.35s" stroke="var(--cyan)" fill="none" filter="url(#glow)"><path d="M1190 410V478"/><circle cx="1190" cy="478" r="10"/><path d="M1180 478H1200M1190 468V488"/><circle cx="1190" cy="410" r="5" fill="var(--cyan)"/><path d="M1210 478V546"/><circle cx="1210" cy="546" r="10"/><path d="M1200 546H1220M1210 536V556"/><circle cx="1210" cy="478" r="5" fill="var(--cyan)"/><path d="M1230 546V614"/><circle cx="1230" cy="614" r="10"/><path d="M1220 614H1240M1230 604V624"/><circle cx="1230" cy="546" r="5" fill="var(--cyan)"/></g>
+  <g class="reveal" style="--d:2.6s" fill="var(--magenta)" font-size="12" text-anchor="middle"><text x="1300" y="414">⟨Z₀⟩</text><text x="1300" y="482">⟨Z₁⟩</text><text x="1300" y="550">⟨Z₂⟩</text><text x="1300" y="618">⟨Z₃⟩</text></g>
+  <g class="reveal" style="--d:2.85s"><path d="M1315 649C1270 687 1100 687 1035 654" fill="none" stroke="var(--cyan)" marker-end="url(#arrow)" class="signal"/></g>
+  <text x="894" y="687" class="code reveal" style="--d:3.0s">C(θ) → classical optimizer → update θ,φ</text>
+
+  <!-- Fuzzy inference -->
+  <text x="459" y="484" class="eyebrow reveal" style="--d:1.42s">FUZZY INFERENCE / CENTROID</text>
+  <path d="M472 679H825M482 687V515" stroke="var(--line)" class="trace" style="--len:530;--d:1.7s"/>
+  <g class="reveal" style="--d:1.95s"><path d="M482 672C516 672 526 535 574 535S632 672 664 672Z" fill="url(#lowFill)"/></g>
+  <g class="reveal" style="--d:2.18s"><path d="M545 672C585 672 610 558 648 558S708 672 744 672Z" fill="url(#midFill)"/></g>
+  <g class="reveal" style="--d:2.41s"><path d="M650 672C686 672 718 532 766 532S820 667 825 672Z" fill="url(#highFill)"/></g>
+  <path d="M482 672C516 672 526 535 574 535S632 672 664 672M545 672C585 672 610 558 648 558S708 672 744 672M650 672C686 672 718 532 766 532S820 667 825 672" fill="none" stroke="url(#accent)" stroke-width="3" class="trace" style="--len:1200;--d:2.25s"/>
+  <path d="M675 522V672" stroke="var(--text)" stroke-dasharray="5 7" class="trace" style="--len:160;--d:2.65s"/><g class="reveal" style="--d:3.1s"><circle cx="675" cy="672" r="5" fill="var(--text)"/></g>
+  <text x="459" y="510" class="code reveal" style="--d:1.65s">RULE AGGREGATION → DEFUZZIFICATION</text>
+  <g class="reveal fine" style="--d:2.8s"><text x="500" y="701" class="tiny" fill="var(--purple)">LOW</text><text x="622" y="701" class="tiny" fill="var(--cyan)">MID</text><text x="758" y="701" class="tiny" fill="var(--magenta)">HIGH</text><text x="675" y="536" class="tiny" text-anchor="middle">CENTROID y*</text></g>
+
+  <!-- Publications and projects -->
+  <text x="54" y="760" class="eyebrow reveal" style="--d:2.15s">TOP 3 PUBLICATIONS</text>
+
+      <g class="reveal" style="--d:2.55s">
+        <rect x="50" y="765" width="350" height="72" rx="11" class="inner"/>
+        <text x="68" y="791" class="year">2025</text>
+        <text x="116" y="790" class="pubTitle">Bernstein–Vazirani Algorithm: Quantum…</text>
+        <text x="116" y="814" class="tiny">WECIQ 2025</text>
+        <text x="382" y="814" class="status" text-anchor="end">LISTED · REVIEW PENDING</text>
+      </g>
+      <g class="reveal" style="--d:2.77s">
+        <rect x="50" y="856" width="350" height="72" rx="11" class="inner"/>
+        <text x="68" y="882" class="year">2025</text>
+        <text x="116" y="881" class="pubTitle">CNN Architecture Assessment: Exploring…</text>
+        <text x="116" y="905" class="tiny">ERAMIA-RS 2025</text>
+        <text x="382" y="905" class="status" text-anchor="end">LISTED · REVIEW PENDING</text>
+      </g>
+      <g class="reveal" style="--d:2.99s">
+        <rect x="50" y="947" width="350" height="72" rx="11" class="inner"/>
+        <text x="68" y="973" class="year">2025</text>
+        <text x="116" y="972" class="pubTitle">Analysis of the Mach–Zehnder…</text>
+        <text x="116" y="996" class="tiny">WEIT 2025</text>
+        <text x="382" y="996" class="status" text-anchor="end">LISTED · REVIEW PENDING</text>
+      </g>
+  <text x="459" y="760" class="eyebrow reveal" style="--d:2.4s">SELECTED BUILDS / RESEARCH → CODE</text>
+  <text x="1340" y="760" class="tiny reveal fine" text-anchor="end" style="--d:2.5s">PYTHON · QISKIT · PYTORCH · NUMPY · VHDL · C++</text>
+
+      <g class="reveal" style="--d:2.75s">
+        <rect x="455" y="780" width="282" height="126" rx="13" class="inner"/>
+        <rect x="455" y="780" width="4" height="126" rx="2" fill="var(--cyan)"/>
+        <text x="473" y="807" class="cardTag">QUANTUM</text>
+        <text x="473" y="835" class="cardTitle">quantum-algorithms-qiskit</text>
+        <text x="473" y="857" class="tiny fine">Fundamental quantum algorithms and…</text>
+        <text x="473" y="876" class="tiny">Jupyter Notebook</text>
+        <text x="473" y="894" class="cardLink">theory → circuits → simulation</text>
+      </g>
+      <g class="reveal" style="--d:2.91s">
+        <rect x="755" y="780" width="282" height="126" rx="13" class="inner"/>
+        <rect x="755" y="780" width="4" height="126" rx="2" fill="var(--purple)"/>
+        <text x="773" y="807" class="cardTag">COMPUTER VISION</text>
+        <text x="773" y="835" class="cardTitle">cifar10-cnn-pytorch</text>
+        <text x="773" y="857" class="tiny fine">Deep CNN experiments for CIFAR-10 with…</text>
+        <text x="773" y="876" class="tiny">Python</text>
+        <text x="773" y="894" class="cardLink">paper → experiments → code</text>
+      </g>
+      <g class="reveal" style="--d:3.07s">
+        <rect x="1055" y="780" width="282" height="126" rx="13" class="inner"/>
+        <rect x="1055" y="780" width="4" height="126" rx="2" fill="var(--cyan)"/>
+        <text x="1073" y="807" class="cardTag">FROM SCRATCH</text>
+        <text x="1073" y="835" class="cardTitle">mnist-neural-network-numpy</text>
+        <text x="1073" y="857" class="tiny fine">Neural network with manual forward and…</text>
+        <text x="1073" y="876" class="tiny">Python</text>
+        <text x="1073" y="894" class="cardLink">equations → implementation →…</text>
+      </g>
+      <g class="reveal" style="--d:3.23s">
+        <rect x="455" y="924" width="282" height="126" rx="13" class="inner"/>
+        <rect x="455" y="924" width="4" height="126" rx="2" fill="var(--purple)"/>
+        <text x="473" y="951" class="cardTag">SCIENTIFIC COMPUTING</text>
+        <text x="473" y="979" class="cardTitle">nbody-sim</text>
+        <text x="473" y="1001" class="tiny fine">N-body simulation with multiple…</text>
+        <text x="473" y="1020" class="tiny">Python</text>
+        <text x="473" y="1038" class="cardLink">physics → numerics → visualization</text>
+      </g>
+      <g class="reveal" style="--d:3.39s">
+        <rect x="755" y="924" width="282" height="126" rx="13" class="inner"/>
+        <rect x="755" y="924" width="4" height="126" rx="2" fill="var(--cyan)"/>
+        <text x="773" y="951" class="cardTag">DIGITAL HARDWARE</text>
+        <text x="773" y="979" class="cardTitle">digital-systems-labs</text>
+        <text x="773" y="1001" class="tiny fine">Synthesizable VHDL designs including…</text>
+        <text x="773" y="1020" class="tiny">VHDL</text>
+        <text x="773" y="1038" class="cardLink">architecture → RTL → synthesis</text>
+      </g>
+      <g class="reveal" style="--d:3.55s">
+        <rect x="1055" y="924" width="282" height="126" rx="13" class="inner"/>
+        <rect x="1055" y="924" width="4" height="126" rx="2" fill="var(--purple)"/>
+        <text x="1073" y="951" class="cardTag">SYSTEMS</text>
+        <text x="1073" y="979" class="cardTitle">z80-toolchain</text>
+        <text x="1073" y="1001" class="tiny fine">A C++ Z80 toolchain with assembler,…</text>
+        <text x="1073" y="1020" class="tiny">C++</text>
+        <text x="1073" y="1038" class="cardLink">ISA → toolchain → emulation</text>
+      </g>
+
+  <!-- Compact stats footer -->
+  <g class="reveal" style="--d:4.05s">
+    <text x="54" y="1111" class="eyebrow">GITHUB SIGNAL</text>
+    <text x="54" y="1156" class="heading">25</text><text x="54" y="1176" class="tiny">PUBLIC REPOS</text>
+    <text x="220" y="1156" class="heading">12</text><text x="220" y="1176" class="tiny">FOLLOWERS</text>
+    <text x="380" y="1156" class="heading">2</text><text x="380" y="1176" class="tiny">STARS RECEIVED</text>
+    <text x="560" y="1156" class="heading">23</text><text x="560" y="1176" class="tiny">FOLLOWING</text>
+    <text x="1015" y="1122" class="tiny">REPOSITORY LANGUAGES</text>
+    <rect x="1015" y="1137" width="300" height="13" rx="6" fill="var(--inner)"/><rect x="1015.0" y="1137" width="206.2" height="13" fill="var(--cyan)"/><rect x="1221.2" y="1137" width="37.5" height="13" fill="var(--purple)"/><rect x="1258.8" y="1137" width="37.5" height="13" fill="var(--blue)"/><rect x="1296.2" y="1137" width="18.8" height="13" fill="var(--magenta)"/>
+    <text x="1015" y="1173" class="tiny">Python 11 · C 2 · Jupyter Notebook 2 · C++ 1</text>
+    <text x="1315" y="1122" class="tiny" text-anchor="end">REFRESHED 2026-07-30 03:05 UTC</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="48" viewBox="0 0 220 48" role="img" aria-label="PUBLICATIONS: papers · ORCID">
+  <style>
+    :root { --bg:#09162a; --text:#e8f4ff; --muted:#91a8bd; --line:#1a4267; --accent:#a78bfa; }
+    text { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace; }
+    .frame { fill:var(--bg); stroke:var(--line); stroke-width:1; }
+    .beam { stroke:var(--accent); stroke-width:2; stroke-dasharray:220; stroke-dashoffset:220; animation:draw 1.4s ease forwards; }
+    .arrow { animation:pulse 2.8s ease-in-out infinite; transform-origin:200px 24px; }
+    @keyframes draw { to { stroke-dashoffset:0; } }
+    @keyframes pulse { 0%,100% { opacity:.5; transform:translateX(0); } 50% { opacity:1; transform:translateX(3px); } }
+    @media (prefers-color-scheme:light) { :root { --bg:#ffffff; --text:#132238; --muted:#4c6078; --line:#9ebbd2; } }
+    @media (prefers-reduced-motion:reduce) { .beam,.arrow { animation:none; stroke-dashoffset:0; } }
+  </style>
+  <rect x="1" y="1" width="218" height="46" rx="11" class="frame"/>
+  <path d="M12 46H208" class="beam"/>
+  <text x="16" y="21" fill="var(--text)" font-size="12" font-weight="750" letter-spacing="1">PUBLICATIONS</text>
+  <text x="16" y="36" fill="var(--muted)" font-size="9">papers · ORCID</text>
+  <path d="M194 19L204 24L194 29" fill="none" stroke="var(--accent)" stroke-width="2" class="arrow"/>
+</svg>

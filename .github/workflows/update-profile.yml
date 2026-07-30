@@ -1,0 +1,46 @@
+name: Update public GitHub snapshot
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/profile.json"
+      - "data/research.json"
+      - "data/projects.json"
+      - "data/publications.json"
+      - "scripts/generate_visuals.py"
+  schedule:
+    - cron: "17 9 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Refresh public data and visuals
+        run: python scripts/generate_visuals.py --refresh-github
+
+      - name: Commit changed snapshot
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/github.json generated/
+          if git diff --cached --quiet; then
+            echo "No public profile changes."
+            exit 0
+          fi
+          git commit -m "chore: refresh public profile snapshot"
+          git push
