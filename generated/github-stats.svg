@@ -55,11 +55,11 @@
 
   <text x="42" y="47" class="eyebrow reveal" style="--delay:.16s">GITHUB SIGNAL / PUBLIC SNAPSHOT</text>
 
-    <g class="reveal" style="--delay:0.10s"><text x="54" y="91" class="small">PUBLIC REPOS</text><text x="54" y="135" fill="#29e6f2" font-size="34" font-weight="700">25</text></g>
-    <g class="reveal" style="--delay:0.18s"><text x="244" y="91" class="small">FOLLOWERS</text><text x="244" y="135" fill="#a78bfa" font-size="34" font-weight="700">12</text></g>
-    <g class="reveal" style="--delay:0.26s"><text x="434" y="91" class="small">STARS RECEIVED</text><text x="434" y="135" fill="#29e6f2" font-size="34" font-weight="700">2</text></g>
+    <g class="reveal" style="--delay:0.10s"><text x="54" y="91" class="small">PUBLIC REPOS</text><text x="54" y="135" fill="#29e6f2" font-size="34" font-weight="700">26</text></g>
+    <g class="reveal" style="--delay:0.18s"><text x="244" y="91" class="small">FOLLOWERS</text><text x="244" y="135" fill="#a78bfa" font-size="34" font-weight="700">13</text></g>
+    <g class="reveal" style="--delay:0.26s"><text x="434" y="91" class="small">STARS RECEIVED</text><text x="434" y="135" fill="#29e6f2" font-size="34" font-weight="700">3</text></g>
     <g class="reveal" style="--delay:0.34s"><text x="624" y="91" class="small">FOLLOWING</text><text x="624" y="135" fill="#a78bfa" font-size="34" font-weight="700">23</text></g>
   <g class="reveal" style="--delay:.34s"><path d="M795 58V166" stroke="#183b5f"/><text x="830" y="72" class="small">REPOSITORY LANGUAGES</text></g>
-  <g class="reveal" style="--delay:.45s"><rect x="830" y="100" width="310" height="13" rx="6" fill="#13233a"/><rect x="830.0" y="100" width="218.8" height="13" fill="#29e6f2"/><rect x="1048.8" y="100" width="36.5" height="13" fill="#a78bfa"/><rect x="1085.3" y="100" width="36.5" height="13" fill="#38bdf8"/><rect x="1121.8" y="100" width="18.2" height="13" fill="#d56dff"/><circle cx="830" cy="132" r="4" fill="#29e6f2"/><text x="842" y="136" class="small">Python</text><circle cx="985" cy="132" r="4" fill="#a78bfa"/><text x="997" y="136" class="small">C</text><circle cx="830" cy="156" r="4" fill="#38bdf8"/><text x="842" y="160" class="small">Jupyter Notebook</text><circle cx="985" cy="156" r="4" fill="#d56dff"/><text x="997" y="160" class="small">C++</text></g>
-  <text x="1140" y="184" class="small reveal" text-anchor="end" style="--delay:.52s">REFRESHED 2026-07-30 03:08 UTC · GITHUB API</text>
+  <g class="reveal" style="--delay:.45s"><rect x="830" y="100" width="310" height="13" rx="6" fill="#13233a"/><rect x="830.0" y="100" width="223.9" height="13" fill="#29e6f2"/><rect x="1053.9" y="100" width="34.4" height="13" fill="#a78bfa"/><rect x="1088.3" y="100" width="34.4" height="13" fill="#38bdf8"/><rect x="1122.8" y="100" width="17.2" height="13" fill="#d56dff"/><circle cx="830" cy="132" r="4" fill="#29e6f2"/><text x="842" y="136" class="small">Python</text><circle cx="985" cy="132" r="4" fill="#a78bfa"/><text x="997" y="136" class="small">C</text><circle cx="830" cy="156" r="4" fill="#38bdf8"/><text x="842" y="160" class="small">Jupyter Notebook</text><circle cx="985" cy="156" r="4" fill="#d56dff"/><text x="997" y="160" class="small">C++</text></g>
+  <text x="1140" y="184" class="small reveal" text-anchor="end" style="--delay:.52s">REFRESHED 2026-07-30 11:21 UTC · GITHUB API</text>
 </svg>
