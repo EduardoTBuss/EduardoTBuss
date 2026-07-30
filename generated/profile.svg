@@ -314,8 +314,8 @@
     <text x="380" y="1156" class="heading">2</text><text x="380" y="1176" class="tiny">STARS RECEIVED</text>
     <text x="560" y="1156" class="heading">23</text><text x="560" y="1176" class="tiny">FOLLOWING</text>
     <text x="1015" y="1122" class="tiny">REPOSITORY LANGUAGES</text>
-    <rect x="1015" y="1137" width="300" height="13" rx="6" fill="var(--inner)"/><rect x="1015.0" y="1137" width="206.2" height="13" fill="var(--cyan)"/><rect x="1221.2" y="1137" width="37.5" height="13" fill="var(--purple)"/><rect x="1258.8" y="1137" width="37.5" height="13" fill="var(--blue)"/><rect x="1296.2" y="1137" width="18.8" height="13" fill="var(--magenta)"/>
-    <text x="1015" y="1173" class="tiny">Python 11 · C 2 · Jupyter Notebook 2 · C++ 1</text>
-    <text x="1315" y="1122" class="tiny" text-anchor="end">REFRESHED 2026-07-30 03:05 UTC</text>
+    <rect x="1015" y="1137" width="300" height="13" rx="6" fill="var(--inner)"/><rect x="1015.0" y="1137" width="211.8" height="13" fill="var(--cyan)"/><rect x="1226.8" y="1137" width="35.3" height="13" fill="var(--purple)"/><rect x="1262.1" y="1137" width="35.3" height="13" fill="var(--blue)"/><rect x="1297.4" y="1137" width="17.6" height="13" fill="var(--magenta)"/>
+    <text x="1015" y="1173" class="tiny">Python 12 · C 2 · Jupyter Notebook 2 · C++ 1</text>
+    <text x="1315" y="1122" class="tiny" text-anchor="end">REFRESHED 2026-07-30 03:08 UTC</text>
   </g>
 </svg>
