@@ -1,6 +1,6 @@
 {
   "username": "EduardoTBuss",
-  "public_repos": 26,
+  "public_repos": 27,
   "followers": 13,
   "following": 23,
   "stars_received": 4,
@@ -19,17 +19,17 @@
       "repositories": 2
     },
     {
+      "name": "TypeScript",
+      "repositories": 1
+    },
+    {
       "name": "C++",
       "repositories": 1
     },
     {
       "name": "Java",
       "repositories": 1
-    },
-    {
-      "name": "HTML",
-      "repositories": 1
     }
   ],
-  "refreshed_at": "2026-08-14T10:17:10+00:00"
+  "refreshed_at": "2026-08-15T09:42:15+00:00"
 }
