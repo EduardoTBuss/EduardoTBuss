@@ -229,24 +229,24 @@
 
       <g class="reveal" style="--d:2.55s">
         <rect x="50" y="765" width="350" height="72" rx="11" class="inner"/>
-        <text x="68" y="791" class="year">2025</text>
-        <text x="116" y="790" class="pubTitle">Bernstein–Vazirani Algorithm: Quantum…</text>
-        <text x="116" y="814" class="tiny">WECIQ 2025</text>
-        <text x="382" y="814" class="status" text-anchor="end">LISTED · REVIEW PENDING</text>
+        <text x="68" y="791" class="year">2026</text>
+        <text x="116" y="790" class="pubTitle">A Hybrid Classical–Quantum Formulation of…</text>
+        <text x="116" y="814" class="tiny">IEEE CEC 2026 (WCCI)</text>
+        <text x="382" y="814" class="status" text-anchor="end">PUBLISHED</text>
       </g>
       <g class="reveal" style="--d:2.77s">
         <rect x="50" y="856" width="350" height="72" rx="11" class="inner"/>
-        <text x="68" y="882" class="year">2025</text>
-        <text x="116" y="881" class="pubTitle">CNN Architecture Assessment: Exploring…</text>
-        <text x="116" y="905" class="tiny">ERAMIA-RS 2025</text>
-        <text x="382" y="905" class="status" text-anchor="end">LISTED · REVIEW PENDING</text>
+        <text x="68" y="882" class="year">2026</text>
+        <text x="116" y="881" class="pubTitle">A Systematic Literature Review on…</text>
+        <text x="116" y="905" class="tiny">ICEIS 2026</text>
+        <text x="382" y="905" class="status" text-anchor="end">PUBLISHED</text>
       </g>
       <g class="reveal" style="--d:2.99s">
         <rect x="50" y="947" width="350" height="72" rx="11" class="inner"/>
-        <text x="68" y="973" class="year">2025</text>
-        <text x="116" y="972" class="pubTitle">Analysis of the Mach–Zehnder…</text>
-        <text x="116" y="996" class="tiny">WEIT 2025</text>
-        <text x="382" y="996" class="status" text-anchor="end">LISTED · REVIEW PENDING</text>
+        <text x="68" y="973" class="year">2026</text>
+        <text x="116" y="972" class="pubTitle">QL-Implications: Quantum-Fuzzy Modeling…</text>
+        <text x="116" y="996" class="tiny">ENIAC 2026</text>
+        <text x="382" y="996" class="status" text-anchor="end">ACCEPTED</text>
       </g>
   <text x="459" y="760" class="eyebrow reveal" style="--d:2.4s">SELECTED BUILDS / RESEARCH → CODE</text>
   <text x="1340" y="760" class="tiny reveal fine" text-anchor="end" style="--d:2.5s">PYTHON · QISKIT · PYTORCH · NUMPY · VHDL · C++</text>
