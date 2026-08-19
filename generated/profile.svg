@@ -310,12 +310,12 @@
   <g class="reveal" style="--d:4.05s">
     <text x="54" y="1111" class="eyebrow">GITHUB SIGNAL</text>
     <text x="54" y="1156" class="heading">27</text><text x="54" y="1176" class="tiny">PUBLIC REPOS</text>
-    <text x="220" y="1156" class="heading">13</text><text x="220" y="1176" class="tiny">FOLLOWERS</text>
+    <text x="220" y="1156" class="heading">14</text><text x="220" y="1176" class="tiny">FOLLOWERS</text>
     <text x="380" y="1156" class="heading">4</text><text x="380" y="1176" class="tiny">STARS RECEIVED</text>
     <text x="560" y="1156" class="heading">23</text><text x="560" y="1176" class="tiny">FOLLOWING</text>
     <text x="1015" y="1122" class="tiny">REPOSITORY LANGUAGES</text>
     <rect x="1015" y="1137" width="300" height="13" rx="6" fill="var(--inner)"/><rect x="1015.0" y="1137" width="216.7" height="13" fill="var(--cyan)"/><rect x="1231.7" y="1137" width="33.3" height="13" fill="var(--purple)"/><rect x="1265.0" y="1137" width="33.3" height="13" fill="var(--blue)"/><rect x="1298.3" y="1137" width="16.7" height="13" fill="var(--magenta)"/>
     <text x="1015" y="1173" class="tiny">Python 13 · C 2 · Jupyter Notebook 2 · TypeScript 1</text>
-    <text x="1315" y="1122" class="tiny" text-anchor="end">REFRESHED 2026-08-18 09:48 UTC</text>
+    <text x="1315" y="1122" class="tiny" text-anchor="end">REFRESHED 2026-08-19 09:49 UTC</text>
   </g>
 </svg>
