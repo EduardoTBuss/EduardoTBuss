@@ -1,50 +1,145 @@
-[
-  {
-    "name": "quantum-algorithms-qiskit",
-    "category": "QUANTUM",
-    "description": "Fundamental quantum algorithms and circuits implemented with Qiskit.",
-    "language": "Jupyter Notebook",
-    "connection": "theory → circuits → simulation",
-    "url": "https://github.com/EduardoTBuss/quantum-algorithms-qiskit"
-  },
-  {
-    "name": "cifar10-cnn-pytorch",
-    "category": "COMPUTER VISION",
-    "description": "Deep CNN experiments for CIFAR-10 with a reproducible training pipeline.",
-    "language": "Python",
-    "connection": "paper → experiments → code",
-    "url": "https://github.com/EduardoTBuss/cifar10-cnn-pytorch"
-  },
-  {
-    "name": "mnist-neural-network-numpy",
-    "category": "FROM SCRATCH",
-    "description": "Neural network with manual forward and backpropagation using NumPy.",
-    "language": "Python",
-    "connection": "equations → implementation → validation",
-    "url": "https://github.com/EduardoTBuss/mnist-neural-network-numpy"
-  },
-  {
-    "name": "nbody-sim",
-    "category": "SCIENTIFIC COMPUTING",
-    "description": "N-body simulation with multiple integrators and conservation-law checks.",
-    "language": "Python",
-    "connection": "physics → numerics → visualization",
-    "url": "https://github.com/EduardoTBuss/nbody-sim"
-  },
-  {
-    "name": "digital-systems-labs",
-    "category": "DIGITAL HARDWARE",
-    "description": "Synthesizable VHDL designs including arithmetic and control-path modules.",
-    "language": "VHDL",
-    "connection": "architecture → RTL → synthesis",
-    "url": "https://github.com/EduardoTBuss/digital-systems-labs"
-  },
-  {
-    "name": "z80-toolchain",
-    "category": "SYSTEMS",
-    "description": "A C++ Z80 toolchain with assembler, linker, loader and emulator.",
-    "language": "C++",
-    "connection": "ISA → toolchain → emulation",
-    "url": "https://github.com/EduardoTBuss/z80-toolchain"
-  }
-]
+{
+  "updated": "2026-09-03",
+  "items": [
+    {
+      "slug": "quantum-algorithms-qiskit",
+      "title": "quantum-algorithms-qiskit",
+      "tagline": "Foundational quantum algorithms as executable notebooks: theory, circuit and measured result side by side.",
+      "summary": "Bernstein-Vazirani, Deutsch-Jozsa and a Mach-Zehnder interferometer implemented in Qiskit. Each algorithm ships as a notebook that carries the derivation, the drawn circuit and the executed counts in one place, so the claimed speedup can be checked rather than believed. Two of the three back conference papers.",
+      "category": "Quantum computing",
+      "languages": ["Python", "Qiskit", "Jupyter"],
+      "year": 2025,
+      "order": 1,
+      "pinned": true,
+      "has_page": true,
+      "headline_metric": "Simulated Mach-Zehnder fringe matches the analytic P(0) = cos^2(dtheta/2)",
+      "publications": ["weciq-2025-bernstein-vazirani", "weit-2025-imz"],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/quantum-algorithms-qiskit",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "nbody-sim",
+      "title": "nbody-sim",
+      "tagline": "A gravitational N-body simulator whose numerical integrator is the object of study, not an implementation detail.",
+      "summary": "Four time integrators live behind one interface and can be swapped with a keystroke while the simulation runs. Correctness is not asserted: it is measured against conservation laws, on the analytic Sun-Earth system and on the real Solar System built from NASA JPL Horizons ephemerides.",
+      "category": "Scientific computing",
+      "languages": ["Python", "NumPy", "Pygame"],
+      "year": 2026,
+      "order": 2,
+      "pinned": true,
+      "has_page": true,
+      "headline_metric": "Relative energy drift over ~400 orbits: 7.5e-6 (Leapfrog) against 0.91 (explicit Euler), same dt",
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/nbody-sim",
+        "demo": null,
+        "docs": null,
+        "dataset": "https://ssd.jpl.nasa.gov/horizons/"
+      }
+    },
+    {
+      "slug": "physics2d",
+      "title": "physics2d",
+      "tagline": "A 2D rigid-body engine written from scratch to find out where stacking stability actually comes from.",
+      "summary": "Broadphase, SAT narrowphase, manifold generation by face clipping and a sequential-impulse contact solver, with the physics core never importing a graphics library. On top of it sits an interactive Physics 1 lab that draws the free-body diagram of the selected body while the simulation runs.",
+      "category": "Simulation",
+      "languages": ["Python", "NumPy", "Pygame"],
+      "year": 2026,
+      "order": 3,
+      "pinned": true,
+      "has_page": true,
+      "headline_metric": "Five-box stack drifts 3.1e-4 in 7 s; solver 3.0-3.9x faster after profiling",
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/physics2d",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "inventory-management-api",
+      "title": "inventory-management-api",
+      "tagline": "A multi-tenant inventory API where stock is derived from an append-only ledger instead of a mutable counter.",
+      "summary": "FastAPI and SQLAlchemy 2.0 behind JWT auth, with a dependency-free frontend served by the same process. The interesting part is not the CRUD: quantities are reconstructed from a movement ledger, the cached total is only written inside the same transaction, and concurrent writes are serialized with a pessimistic row lock.",
+      "category": "Backend systems",
+      "languages": ["Python", "FastAPI", "SQLAlchemy", "SQLite"],
+      "year": 2026,
+      "order": 4,
+      "pinned": true,
+      "has_page": true,
+      "headline_metric": "Invariant quantity == SUM(ledger deltas) audited across every product on each seed run",
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/inventory-management-api",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "mnist-neural-network-numpy",
+      "title": "mnist-neural-network-numpy",
+      "tagline": "A feedforward network with forward pass, backpropagation and gradients written out by hand in NumPy.",
+      "summary": "A 784-64-32-10 classifier built without any deep learning framework, to make the mathematics concrete rather than imported. He initialization, ReLU and softmax, dropout and L2 weight decay, mini-batch gradient descent, all derived and implemented from the equations.",
+      "category": "Machine learning",
+      "languages": ["Python", "NumPy"],
+      "year": 2025,
+      "order": 5,
+      "pinned": true,
+      "has_page": true,
+      "headline_metric": "97-98% test accuracy on MNIST after 35 epochs, framework-free",
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/mnist-neural-network-numpy",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "poker-decision-analytics",
+      "title": "poker-decision-analytics",
+      "tagline": "A quantitative framework for decision quality under uncertainty, using poker hand histories as structured data.",
+      "summary": "Not a poker tool. A parsing and analysis pipeline over the public Pluribus hand histories, treated as a controlled environment where every decision has a measurable outcome, an explicit context and a risk profile. The output is expected value, variance, drawdown and tail risk broken down by position and street.",
+      "category": "Data analysis",
+      "languages": ["Python", "Pandas", "NumPy", "Matplotlib"],
+      "year": 2026,
+      "order": 6,
+      "pinned": true,
+      "has_page": true,
+      "headline_metric": "60,000+ hands over 92 sessions; 5% worst outcomes at -14.24 BB",
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/poker-decision-analytics",
+        "demo": null,
+        "docs": null,
+        "dataset": "https://github.com/uoftcprg/phh-dataset"
+      }
+    },
+    {
+      "slug": "cifar10-cnn-pytorch",
+      "title": "cifar10-cnn-pytorch",
+      "tagline": "Reproducible CIFAR-10 experiments measuring how depth, width and kernel size trade off against each other.",
+      "summary": "The experimental pipeline behind the ERAMIA-RS 2025 paper on CNN architecture assessment.",
+      "category": "Computer vision",
+      "languages": ["Python", "PyTorch"],
+      "year": 2025,
+      "order": 90,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": ["eramia-rs-2025-cnn-architecture"],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/cifar10-cnn-pytorch",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    }
+  ]
+}

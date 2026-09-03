@@ -1,46 +1,59 @@
 {
+  "updated": "2026-09-03",
   "items": [
     {
+      "id": "cec-2026-hybrid-fuzzy-cri",
       "year": 2026,
       "title": "A Hybrid Classical–Quantum Formulation of Fuzzy CRI Inference with a Triage Case Study",
       "venue": "IEEE CEC 2026 (WCCI)",
       "status": "published",
-      "url": ""
+      "url": "",
+      "doi": null
     },
     {
+      "id": "iceis-2026-encoding-slr",
       "year": 2026,
       "title": "A Systematic Literature Review on Classical Data Encoding Strategies for Hybrid Quantum Machine Learning",
       "venue": "ICEIS 2026",
       "status": "published",
-      "url": "https://doi.org/10.5220/0014958100004018"
+      "url": "https://doi.org/10.5220/0014958100004018",
+      "doi": "10.5220/0014958100004018"
     },
     {
+      "id": "eniac-2026-ql-implications",
       "year": 2026,
       "title": "QL-Implications: Quantum-Fuzzy Modeling and Application to Financial Decision-Making",
       "venue": "ENIAC 2026",
       "status": "accepted",
-      "url": ""
+      "url": "",
+      "doi": null
     },
     {
+      "id": "eramia-rs-2025-cnn-architecture",
       "year": 2025,
       "title": "CNN Architecture Assessment: Exploring Depth, Width, and Kernel Size for Image Classification",
       "venue": "ERAMIA-RS 2025",
       "status": "published",
-      "url": "https://doi.org/10.5753/eramiars.2025.16782"
+      "url": "https://doi.org/10.5753/eramiars.2025.16782",
+      "doi": "10.5753/eramiars.2025.16782"
     },
     {
+      "id": "weit-2025-imz",
       "year": 2025,
       "title": "Análise do IMZ-Algoritmo com Simulação via Qiskit",
       "venue": "WEIT 2025",
       "status": "published",
-      "url": "https://doi.org/10.5753/weit.2025.40445"
+      "url": "https://doi.org/10.5753/weit.2025.40445",
+      "doi": "10.5753/weit.2025.40445"
     },
     {
+      "id": "weciq-2025-bernstein-vazirani",
       "year": 2025,
       "title": "Algoritmo de Bernstein-Vazirani: Análise Quântica com Implementação no Qiskit",
       "venue": "WECIQ 2025",
       "status": "published",
-      "url": "https://www.even3.com.br/anais/weciqwcq2025-556747/1263591-algoritmo-de-bernstein-vazirani--analise-quantica-com-implementacao-no-qiskit"
+      "url": "https://www.even3.com.br/anais/weciqwcq2025-556747/1263591-algoritmo-de-bernstein-vazirani--analise-quantica-com-implementacao-no-qiskit",
+      "doi": null
     }
   ]
 }
