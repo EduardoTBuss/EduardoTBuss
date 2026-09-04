@@ -1,48 +1,93 @@
 # Updating this profile
 
-The visual profile is generated from small JSON files. You do not need to edit the SVG by hand.
+There are now two repositories. This one (`EduardoTBuss`) owns the data and the README;
+`EduardoTBuss.github.io` owns the site and only reads what lives here. Keep that direction
+one-way: never hand-edit a JSON file from the site repo.
 
-## Change the content
+## The rule of thumb
 
-- `data/profile.json`: identity, bio, interests and links.
-- `data/research.json`: current research directions.
-- `data/projects.json`: selected repositories and their research-to-code connection.
-- `data/publications.json`: publications, venue, status and links.
-- `data/github.json`: public GitHub metrics, updated automatically when requested.
+> What changes weekly lives on the site. This README only carries what is stable for
+> months. If you felt the urge to update the README twice in the same month, the content
+> was in the wrong place.
 
-When one of the editable content JSON files is changed on `main`, GitHub Actions regenerates and commits the SVGs automatically. The scheduled workflow also refreshes public GitHub metrics once per day. Generated SVG files should not be edited by hand.
+Numbers that move often (repo count, followers, stars) are generated from `data/github.json`
+every day by the workflow. Prose that moves often (a new project write-up, an in-progress
+paper's full abstract) belongs on `eduardotbuss.github.io`, not here.
 
-Publication status should be explicit: `published`, `accepted`, `submitted`, or `in preparation`.
-Do not add a DOI or paper URL until it is verified.
+## I want to change X -> edit Y
 
-## Regenerate the visuals
+| I want to... | Edit | Then |
+|---|---|---|
+| Fix my bio, links, name | `data/profile.json` | site picks it up on its next build; README bio is hand-written in `README.md`, update both |
+| Add/reorder/retire a pinned project | `data/projects.json` | run `--validate-data`; `--render-readme` updates the README table; the site regenerates its project list and pages |
+| Add a publication | `data/publications.json`, with a new stable `id` | run `--validate-data`; `--render-readme` updates the "Recent publications" list if it is one of the 3 most recent |
+| Link a publication to a project | `projects[].publications` in `data/projects.json`, using the publication's `id` | run `--validate-data` -- it fails loudly if the `id` does not exist |
+| Update current research directions | `data/research.json` (site) and the "About" prose in `README.md` (hand-written, do it yourself) | -- |
+| Update "what I'm doing now" | `data/now.json` (site's Now section) and the "Currently" bullets in `README.md` if they changed for months, not weeks | -- |
+| Update the CV | `data/cv.json` | site CV section picks it up; no README block depends on it |
+| Change the projects table's columns or the publication citation format | `scripts/profile_kit/readme_blocks.py` | one file, one function per block |
+| Change the stats strip's palette, layout or fields | `scripts/profile_kit/stats_band.py` | constants are at the top of the file |
+| Change how GitHub is queried, or what gets computed from the API response | `scripts/profile_kit/github_api.py` | -- |
+| Change the validation rules | `scripts/profile_kit/validation.py` | -- |
+| Change where files live on disk | `scripts/profile_kit/paths.py` | -- |
+| Change what runs, or add a CLI flag | `scripts/generate_visuals.py` | stays a thin dispatcher on purpose, see its module docstring |
+
+## The generator: `scripts/generate_visuals.py`
+
+Stdlib-only Python (no `requirements.txt`, no CI cache to manage). The logic lives in
+`scripts/profile_kit/`, one module per responsibility:
+
+- `paths.py` -- where files live; every other module asks this one.
+- `datastore.py` -- read/write `data/*.json`.
+- `validation.py` -- the data contract checks (schema, cross-references).
+- `github_api.py` -- talks to the GitHub REST API, writes `data/github.json`.
+- `stats_band.py` -- draws the two stats SVGs.
+- `readme_blocks.py` -- renders the three generated blocks of `README.md`.
 
 ```bash
-python scripts/generate_visuals.py
+python scripts/generate_visuals.py --validate-data     # check the data contract, exit 1 on error
+python scripts/generate_visuals.py --refresh-github    # fetch public GitHub metrics
+python scripts/generate_visuals.py --render-readme     # regenerate the stats SVGs + rewrite README blocks
+python scripts/generate_visuals.py                     # validate + render-readme, no network
 ```
 
-To refresh public profile/repository metrics from GitHub first:
+`--refresh-github` works without a `GITHUB_TOKEN` locally (prints a warning and calls the
+API unauthenticated, 60 requests/hour). In CI, the workflow passes `GITHUB_TOKEN` for free
+(no new secret) so the daily cron gets 5000 requests/hour instead of racing every other
+unauthenticated caller on the runner's shared IP.
 
-```bash
-python scripts/generate_visuals.py --refresh-github
-```
+## Marked blocks in `README.md`
 
-Generated files are written to `generated/` and are committed because GitHub renders them from the repository. `generated/profile.svg` is the single self-contained dashboard used by the README. It uses a horizontal composition, fills the available README width, follows the viewer's light or dark color scheme and hides secondary detail on narrow viewports. Four small `nav-*.svg` files are wrapped in regular README links so the navigation remains genuinely clickable on GitHub. The separate module SVGs remain available for focused editing and testing, but are not displayed by the README.
+Three pairs of HTML comments mark generated content; everything outside them is prose you
+write by hand and `--render-readme` never touches:
 
-The background dust is generated deterministically inside `dashboard_profile()`. It uses CSS-only motion, does not require JavaScript and becomes static when the viewer prefers reduced motion. Its three global controls are near the top of `scripts/generate_visuals.py`:
+- `<!-- projects:start -->` / `<!-- projects:end -->` -- the pinned projects table.
+- `<!-- publications:start -->` / `<!-- publications:end -->` -- the 3 most recent publications.
+- `<!-- stats:start -->` / `<!-- stats:end -->` -- the `<picture>` stats strip.
 
-- `tamanho_particula`: base grain size.
-- `cor_particula`: shared CSS/hex color.
-- `aleatoriedade_particula`: amount of variation in count, position, shape, speed and trajectory, from `0.0` to `1.0`.
+If a marker is missing or out of order, `--render-readme` raises an error and writes
+nothing, rather than corrupting the file.
 
-The dashboard follows an explicit visual stack: background and grid, translucent panel surfaces, ambient particles, then meaningful text and diagrams. This lets grains pass over each module surface without obscuring its content.
+## The stats strip
 
-The dashboard starts as an almost empty field and coordinates its grid, signal buses, panel outlines and content over approximately six seconds. Keep the timing centralized in `dashboard_profile()` so later changes remain synchronized. Reduced-motion preferences skip directly to the completed state.
+`generated/stats-light.svg` and `generated/stats-dark.svg` are drawn from `data/github.json`
+by `stats_band.py`. No `github-readme-stats`-style third-party service: it rate-limits and
+occasionally serves a broken card. Both files render identically today: the real defense
+against GitHub's light/dark split is a transparent background and a single neutral color
+(`#7d8590`) legible on both themes, because `prefers-color-scheme` inside an `<img>` tracks
+the visitor's OS, not the theme picked on github.com. `<picture>` is still wired up so a
+future tone refinement is a change inside `stats_band.py` alone.
 
-The displayed circuit is the only VQC in the dashboard. It is a generic, theoretically coherent illustrative model: angle encoding, parameterized `RY/RZ` layers, a three-gate nearest-neighbor `CX` chain connecting all four qubits, `Z` expectation values and a classical parameter-update loop. Replace its topology when a specific paper or experiment should be represented.
+## Automation
 
-The neural panel contains stationary layer nodes only. Its animation activates connections and layers in sequence; no particle travels along an edge.
+`.github/workflows/update-profile.yml` runs daily (`17 9 * * *` UTC) and on `workflow_dispatch`,
+plus on push to `main` when a content or generator file changes. It validates, refreshes
+`data/github.json`, re-renders `README.md`, and commits `data/github.json`, `generated/` and
+`README.md` as `github-actions[bot]` if anything changed. `README.md` is excluded from the
+push trigger's path list so the bot's own commit can never start another run.
 
-## Preview
+## What is preserved but retired
 
-Open the generated SVG files in a browser, then preview `README.md` on GitHub. The SVGs include a reduced-motion fallback and remain readable after animation ends.
+The old animated dashboard (`generated/profile.svg` and friends, and the ~900 extra lines of
+Python that drew it) still exists in full on the `legacy/svg-dashboard` branch, untouched.
+Nothing was deleted from history, only from `main`.

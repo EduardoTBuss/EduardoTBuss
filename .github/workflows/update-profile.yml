@@ -5,12 +5,21 @@ on:
   push:
     branches:
       - main
+    # GitHub Actions rejects a workflow that sets both `paths` and
+    # `paths-ignore` on the same event, so the README exclusion is folded
+    # into this allow-list as a negated entry instead of a separate key.
+    # Net effect is exactly "paths-ignore: README.md": a commit that only
+    # touches README.md never re-triggers this workflow.
     paths:
       - "data/profile.json"
       - "data/research.json"
       - "data/projects.json"
       - "data/publications.json"
+      - "data/now.json"
+      - "data/cv.json"
       - "scripts/generate_visuals.py"
+      - "scripts/profile_kit/**"
+      - "!README.md"
   schedule:
     - cron: "17 9 * * *"
 
@@ -29,15 +38,17 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Refresh public data and visuals
-        run: python scripts/generate_visuals.py --refresh-github
+      - name: Validate data, refresh GitHub metrics and render README
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate_visuals.py --validate-data --refresh-github --render-readme
 
       - name: Commit changed snapshot
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/github.json generated/
+          git add data/github.json generated/ README.md
           if git diff --cached --quiet; then
             echo "No public profile changes."
             exit 0
