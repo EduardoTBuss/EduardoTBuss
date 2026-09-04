@@ -22,8 +22,11 @@ def load(name: str) -> Any:
 def save_json(name: str, value: Any) -> None:
     """Write one file into data/ with the same formatting every time.
 
-    Two-space indent and a trailing newline are what keeps `git diff` quiet
-    when the same value is written twice in a row.
+    Two-space indent, a trailing newline and an explicit LF line ending
+    (matching .gitattributes) are what keeps `git diff` quiet when the same
+    value is written twice in a row, including across Windows checkouts
+    where the platform default would silently inject CRLF.
     """
     text = json.dumps(value, ensure_ascii=False, indent=2) + "\n"
-    (paths.DATA / name).write_text(text, encoding="utf-8")
+    with open(paths.DATA / name, "w", encoding="utf-8", newline="\n") as handle:
+        handle.write(text)
