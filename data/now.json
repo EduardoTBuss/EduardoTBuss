@@ -2,7 +2,7 @@
   "updated": "2026-09-03",
   "lines": [
     "Working on hybrid quantum-fuzzy inference: turning CRI rule bases into circuits and measuring what the translation costs.",
-    "Building physics2d and nbody-sim, two simulators used to argue that correctness comes from verifiable invariants, not from output that looks plausible.",
+    "Building physics2d and nbody-sim, two simulators arguing that correctness comes from verifiable invariants.",
     "Preparing direct-PhD applications in quantum machine learning for northern Europe and Oceania."
   ]
 }
