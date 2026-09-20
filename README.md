@@ -57,7 +57,7 @@ digital hardware, systems programming and the occasional frontend.
 <!-- stats:start -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./generated/stats-dark.svg">
-  <img src="./generated/stats-light.svg" width="760" alt="28 repositories · 4 stars · 17 followers · Python, C, Jupyter Notebook · active since 2024 · updated 2026-09-19">
+  <img src="./generated/stats-light.svg" width="760" alt="28 repositories · 4 stars · 17 followers · Python, C, Jupyter Notebook · active since 2024 · updated 2026-09-20">
 </picture>
 
 _Updated daily._
