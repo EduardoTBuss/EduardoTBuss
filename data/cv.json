@@ -1,9 +1,9 @@
 {
-  "updated": "2026-09-07",
+  "updated": "2026-09-25",
   "review_status": "reviewed",
   "education": [
     {
-      "period": "2024—2028 (expected)",
+      "period": "2024 to 2027/2 (expected)",
       "degree": "BSc in Computer Engineering",
       "institution": "Universidade Federal de Pelotas (UFPel)",
       "detail": "Pelotas, RS, Brazil. Focus on quantum computing, fuzzy systems, machine learning and digital hardware."
@@ -11,23 +11,25 @@
   ],
   "experience": [
     {
-      "period": "2025—",
+      "period": "Jan 2025 to present",
       "role": "Undergraduate researcher, PROBIC/FAPERGS fellow",
       "org": "Tech&AppliedD-GM / Q-Flex subgroup, UFPel",
-      "detail": "Quantum computing and fuzzy logic under Prof. Dr. Renata Hax Sander Reiser (fellowship since 2026). Quantum algorithms and circuits in Qiskit; quantum machine learning and quantum-fuzzy inference."
+      "detail": "Research since January 2025 and FAPERGS fellow since February 2026 under Prof. Dr. Renata Hax Sander Reiser. Quantum and fuzzy experiments in Python, Qiskit and PennyLane."
     },
     {
-      "period": "2025—",
-      "role": "Undergraduate researcher",
+      "period": "Mar 2025 to Jan 2026",
+      "role": "Volunteer undergraduate researcher",
       "org": "ViTech, UFPel",
-      "detail": "Deep learning and computer vision; assessment and optimisation of neural network architectures."
+      "detail": "Evaluated CNN depth, width and kernel size with PyTorch and TensorFlow; results published at ERAMIA-RS 2025."
     }
   ],
   "skills": [
-    { "group": "Languages", "items": ["Python", "C", "C++", "Java", "VHDL", "TypeScript"] },
-    { "group": "Quantum computing", "items": ["Qiskit", "Qiskit Machine Learning"] },
-    { "group": "Machine learning", "items": ["PyTorch", "TensorFlow", "scikit-learn", "NumPy"] },
-    { "group": "Backend and data", "items": ["FastAPI", "SQLAlchemy", "SQLite", "Pandas"] }
+    { "group": "Languages", "items": ["Python", "C", "Java", "C++", "VHDL"] },
+    { "group": "Machine learning", "items": ["PyTorch", "TensorFlow", "scikit-learn", "NumPy", "Pandas"] },
+    { "group": "AI engineering", "items": ["Local and API LLM integration", "MCP", "Agent workflows", "Human review"] },
+    { "group": "Harness and context engineering", "items": ["Test harnesses", "Persistent context", "Agent handoffs", "Reproducible evaluation"] },
+    { "group": "Quantum computing", "items": ["Qiskit", "PennyLane", "Qiskit Machine Learning"] },
+    { "group": "Backend and tools", "items": ["FastAPI", "SQLAlchemy", "SQLite", "Docker", "Git"] }
   ],
   "awards": [],
   "pdf": null

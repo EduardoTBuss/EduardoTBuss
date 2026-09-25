@@ -6,37 +6,40 @@
 
 # Eduardo Timm Buss
 
-Undergraduate researcher working across quantum computing, fuzzy systems and machine learning.
+**AI Engineering · Machine Learning · Research**
+
+Computer Engineering student at UFPel and FAPERGS research fellow. I build applied AI
+workflows, evaluate learning systems, and turn research ideas into testable software.
 
 **[eduardotbuss.github.io](https://eduardotbuss.github.io)** · [GitHub](https://github.com/EduardoTBuss) · [LinkedIn](https://www.linkedin.com/in/eduardotimmbuss) · [ORCID](https://orcid.org/0009-0007-6356-5438) · [academic email](mailto:etbuss@inf.ufpel.edu.br)
 
-## About
+## What I build
 
-Computer Engineering student at UFPel, building and studying computational systems at the
-intersection of quantum computing, fuzzy logic, artificial intelligence and digital
-hardware. I favor results that can be checked over results that merely look right: a claim
-ships with a conservation law, an invariant, or an analytic solution it has to match.
+- **Applied AI:** [Order Forge](https://github.com/EduardoTBuss/order-forge), built for a
+  workshop challenge, turns customer PDF orders into validated EDIFACT. It combines
+  deterministic parsing, optional local or API-based LLM extraction, catalog checks and
+  human review. Its benchmark showed that catalog reconciliation, rather than reading
+  the PDF, was the main bottleneck.
+- **Machine learning:** I implement and evaluate neural networks, from a NumPy MNIST
+  classifier to published CNN architecture experiments in PyTorch and TensorFlow.
+- **Research and harness engineering:** I build quantum-fuzzy inference experiments and
+  use reproducible inputs, baselines, tests and explicit failure cases to assess results.
 
-## Currently
+At UFPel, my FAPERGS research with Tech&ApplieD-GM / Q-Flex covers quantum computing and
+fuzzy logic. My earlier ViTech work studied deep learning and computer vision. I am
+interested in AI and ML engineering opportunities where experiments become reliable systems.
 
-- PROBIC/FAPERGS fellow with Tech&AppliedD-GM / Q-Flex and with ViTech, both at UFPel,
-  on quantum algorithms in Qiskit and quantum-fuzzy CRI inference.
-- Building `nbody-sim` and `physics2d`, simulators whose point is numerical correctness,
-  not the visualization on top of it.
-- Preparing direct-PhD applications in quantum machine learning for northern Europe and
-  Oceania.
-
-## Selected projects
+## Selected work
 
 <!-- projects:start -->
 | Project | What it is | Stack |
 |---|---|---|
-| [quantum-algorithms-qiskit](https://eduardotbuss.github.io/projects/quantum-algorithms-qiskit/) | Foundational quantum algorithms as executable notebooks: theory, circuit and measured result side by side. | Python, Qiskit, Jupyter |
-| [nbody-sim](https://eduardotbuss.github.io/projects/nbody-sim/) | A gravitational N-body simulator whose numerical integrator is the object of study. | Python, NumPy, Pygame |
-| [physics2d](https://eduardotbuss.github.io/projects/physics2d/) | A 2D rigid-body engine written from scratch to find out where stacking stability actually comes from. | Python, NumPy, Pygame |
-| [inventory-management-api](https://eduardotbuss.github.io/projects/inventory-management-api/) | A multi-tenant inventory API where stock is derived from an append-only ledger instead of a mutable counter. | Python, FastAPI, SQLAlchemy, SQLite |
+| [Order Forge](https://eduardotbuss.github.io/projects/order-forge/) | PDF purchase orders to validated EDIFACT, with LLM extraction and human reconciliation. | Python, FastAPI, Next.js, Docker |
+| [Q-FIE](https://eduardotbuss.github.io/projects/q-fie/) | An interactive academic demo of fuzzy inference with classically simulated quantum circuits. | Python, Qiskit, FastAPI, React |
+| [Poker Decision Analytics](https://eduardotbuss.github.io/projects/poker-decision-analytics/) | Analyzing 60,000+ poker hands to measure decision quality, variance and tail risk. | Python, Pandas, NumPy, Matplotlib |
 | [mnist-neural-network-numpy](https://eduardotbuss.github.io/projects/mnist-neural-network-numpy/) | A feedforward network with forward pass, backpropagation and gradients written out by hand in NumPy. | Python, NumPy |
-| [poker-decision-analytics](https://eduardotbuss.github.io/projects/poker-decision-analytics/) | A framework for decision quality under uncertainty, built on poker hand histories. | Python, Pandas, NumPy, Matplotlib |
+| [inventory-management-api](https://eduardotbuss.github.io/projects/inventory-management-api/) | A multi-tenant inventory API where stock is derived from an append-only ledger instead of a mutable counter. | Python, FastAPI, SQLAlchemy, SQLite |
+| [quantum-algorithms-qiskit](https://eduardotbuss.github.io/projects/quantum-algorithms-qiskit/) | Foundational quantum algorithms as executable notebooks: theory, circuit and measured result side by side. | Python, Qiskit, Jupyter |
 <!-- projects:end -->
 
 ## Recent publications
@@ -49,10 +52,10 @@ ships with a conservation law, an invariant, or an analytic solution it has to m
 
 ## Stack
 
-Most of the work is in Python: Qiskit and Qiskit Machine Learning for quantum circuits and
-QML, PyTorch/TensorFlow/scikit-learn/NumPy for classical machine learning, and
-FastAPI/SQLAlchemy/SQLite for backend systems. C, C++, Java, VHDL and TypeScript cover
-digital hardware, systems programming and the occasional frontend.
+Python, PyTorch, TensorFlow, scikit-learn and NumPy for ML; Qiskit and PennyLane for
+research; FastAPI, SQLAlchemy, Docker and SQL for applications. I also use C and Java.
+For agent workflows, I work with structured handoffs, persistent context,
+test harnesses and human review.
 
 <!-- stats:start -->
 <picture>
@@ -63,4 +66,4 @@ digital hardware, systems programming and the occasional frontend.
 _Updated daily._
 <!-- stats:end -->
 
-All six projects, every publication and more detail: **[eduardotbuss.github.io](https://eduardotbuss.github.io)**
+Project case studies, evidence and limitations: **[eduardotbuss.github.io](https://eduardotbuss.github.io)**

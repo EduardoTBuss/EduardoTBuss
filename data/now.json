@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-03",
+  "updated": "2026-09-25",
   "lines": [
-    "Working on hybrid quantum-fuzzy inference: turning CRI rule bases into circuits and measuring what the translation costs.",
-    "Building physics2d and nbody-sim, two simulators arguing that correctness comes from verifiable invariants.",
-    "Preparing direct-PhD applications in quantum machine learning for northern Europe and Oceania."
+    "Building and evaluating AI workflows that combine model output, deterministic validation and human review.",
+    "Researching quantum-fuzzy inference and machine learning at UFPel.",
+    "Developing Flightdeck, an in-progress desktop tool for agent workflows."
   ]
 }
