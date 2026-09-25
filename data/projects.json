@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03",
+  "updated": "2026-09-25",
   "items": [
     {
       "slug": "quantum-algorithms-qiskit",
@@ -147,6 +147,66 @@
         "demo": null,
         "docs": null,
         "dataset": "https://github.com/uoftcprg/phh-dataset"
+      }
+    },
+    {
+      "slug": "q-fie",
+      "title": "Q-FIE",
+      "tagline": "An interactive academic demo of fuzzy inference with classically simulated quantum circuits.",
+      "summary": "The Q-CRISP application compares closed-form fuzzy inference with Qiskit Aer circuit simulation for an illustrative seven-symptom, five-category triage model. A React interface shows the relation matrix, urgency degrees and the effect of choosing Reichenbach or quantum Lukasiewicz implication. It is an academic simulation, with no clinical validation or quantum hardware.",
+      "category": "Quantum computing",
+      "languages": ["Python", "Qiskit", "FastAPI", "React"],
+      "year": 2026,
+      "order": 7,
+      "pinned": false,
+      "has_page": true,
+      "headline_metric": "72 backend tests pass locally; illustrative relation matrix has 7 x 5 cells",
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/Q-FIE",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "neuroevolution-sim",
+      "title": "Neuroevolution Simulator",
+      "tagline": "A browser simulation where populations evolve neural-network controllers for survival.",
+      "summary": "Creatures sense a simulated world through rays and scalar inputs; a batched NumPy MLP chooses movement while tournament selection, crossover and mutation create later generations. FastAPI streams frames to a browser canvas. The default configuration contains 100 creatures, four species and eight vision rays; no reproducible performance or learning result is published.",
+      "category": "Artificial life",
+      "languages": ["Python", "NumPy", "FastAPI", "JavaScript"],
+      "year": 2026,
+      "order": 8,
+      "pinned": false,
+      "has_page": true,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/neuroevolution-sim",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "ray-tracer",
+      "title": "Ray Tracer",
+      "tagline": "A from-scratch ray tracer for diffuse, metal and glass spheres with depth of field.",
+      "summary": "A seeded scene of spheres is rendered through recursive light scattering, Monte Carlo antialiasing, gamma correction and a thin-lens camera. The checked-in final image is 400 x 225 pixels, and the scene script requests 100 samples per pixel. A Numba path compiles the inner rendering loop; the repository also keeps a plain Python implementation.",
+      "category": "Computer graphics",
+      "languages": ["Python", "NumPy", "Numba"],
+      "year": 2026,
+      "order": 9,
+      "pinned": false,
+      "has_page": true,
+      "headline_metric": "Final scene: 400 x 225 pixels at 100 samples/pixel",
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/ray-tracer",
+        "demo": null,
+        "docs": null,
+        "dataset": null
       }
     },
     {
