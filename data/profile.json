@@ -1,16 +1,16 @@
 {
   "name": "Eduardo Timm Buss",
   "username": "EduardoTBuss",
-  "eyebrow": "RESEARCH PROFILE / SYSTEM ONLINE",
+  "eyebrow": "AI ENGINEERING / MACHINE LEARNING / RESEARCH",
   "role": "Computer Engineering @ UFPel",
-  "subtitle": "Undergraduate Researcher",
-  "bio": "I build and study computational systems at the intersection of quantum computing, fuzzy logic, artificial intelligence and digital hardware.",
+  "subtitle": "Computer Engineering student and FAPERGS research fellow",
+  "bio": "I build AI and machine learning systems with measurable results, human review where it matters, and research-grade validation.",
   "location": "Pelotas, RS, Brazil",
   "interests": [
-    "Quantum Computing",
-    "Fuzzy Systems",
-    "Artificial Intelligence",
-    "Computer Vision"
+    "AI Engineering",
+    "Machine Learning",
+    "Harness Engineering",
+    "Quantum and Fuzzy Systems"
   ],
   "links": {
     "github": "https://github.com/EduardoTBuss",

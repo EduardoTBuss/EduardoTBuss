@@ -2,6 +2,26 @@
   "updated": "2026-09-25",
   "items": [
     {
+      "slug": "order-forge",
+      "title": "Order Forge",
+      "tagline": "PDF purchase orders to validated EDIFACT, with LLM extraction and human reconciliation.",
+      "summary": "A workshop challenge solution for turning varied customer PDF orders into EDIFACT messages for a legacy ERP. It combines deterministic parsing, optional local or API LLM extraction, catalog-based code resolution, human review and a hard validation gate before export.",
+      "category": "Applied AI",
+      "languages": ["Python", "FastAPI", "Next.js", "Docker"],
+      "year": 2026,
+      "order": 1,
+      "pinned": true,
+      "has_page": true,
+      "headline_metric": "External LLM matched line counts in 4/4 formats; catalog matching remained the bottleneck",
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/order-forge",
+        "demo": null,
+        "docs": "https://github.com/EduardoTBuss/order-forge/blob/main/ORDER_INTAKE.md",
+        "dataset": null
+      }
+    },
+    {
       "slug": "quantum-algorithms-qiskit",
       "title": "quantum-algorithms-qiskit",
       "tagline": "Foundational quantum algorithms as executable notebooks: theory, circuit and measured result side by side.",
@@ -13,7 +33,7 @@
         "Jupyter"
       ],
       "year": 2025,
-      "order": 1,
+      "order": 6,
       "pinned": true,
       "has_page": true,
       "headline_metric": "Simulated Mach-Zehnder fringe matches the analytic P(0) = cos^2(dtheta/2)",
@@ -40,8 +60,8 @@
         "Pygame"
       ],
       "year": 2026,
-      "order": 2,
-      "pinned": true,
+      "order": 7,
+      "pinned": false,
       "has_page": true,
       "headline_metric": "Relative energy drift over ~400 orbits: 7.5e-6 (Leapfrog) against 0.91 (explicit Euler), same dt",
       "publications": [],
@@ -64,8 +84,8 @@
         "Pygame"
       ],
       "year": 2026,
-      "order": 3,
-      "pinned": true,
+      "order": 8,
+      "pinned": false,
       "has_page": true,
       "headline_metric": "Five-box stack drifts 3.1e-4 in 7 s; solver 3.0-3.9x faster after profiling",
       "publications": [],
@@ -89,7 +109,7 @@
         "SQLite"
       ],
       "year": 2026,
-      "order": 4,
+      "order": 5,
       "pinned": true,
       "has_page": true,
       "headline_metric": "Invariant quantity == SUM(ledger deltas) audited across every product on each seed run",
@@ -112,7 +132,7 @@
         "NumPy"
       ],
       "year": 2025,
-      "order": 5,
+      "order": 4,
       "pinned": true,
       "has_page": true,
       "headline_metric": "97-98% test accuracy on MNIST after 35 epochs, framework-free",
@@ -126,9 +146,9 @@
     },
     {
       "slug": "poker-decision-analytics",
-      "title": "poker-decision-analytics",
-      "tagline": "A framework for decision quality under uncertainty, built on poker hand histories.",
-      "summary": "Not a poker tool. A parsing and analysis pipeline over the public Pluribus hand histories, treated as a controlled environment where every decision has a measurable outcome, an explicit context and a risk profile. The output is expected value, variance, drawdown and tail risk broken down by position and street.",
+      "title": "Poker Decision Analytics",
+      "tagline": "Analyzing 60,000+ poker hands to measure decision quality, variance and tail risk.",
+      "summary": "A parsing and analysis pipeline over the public Pluribus hand histories. Poker provides a controlled environment for studying decisions with measurable outcomes, explicit context and risk profiles. The analysis covers expected value, variance, drawdown and tail risk by position and street.",
       "category": "Data analysis",
       "languages": [
         "Python",
@@ -137,7 +157,7 @@
         "Matplotlib"
       ],
       "year": 2026,
-      "order": 6,
+      "order": 3,
       "pinned": true,
       "has_page": true,
       "headline_metric": "60,000+ hands over 92 sessions; 5% worst outcomes at -14.24 BB",
@@ -157,8 +177,8 @@
       "category": "Quantum computing",
       "languages": ["Python", "Qiskit", "FastAPI", "React"],
       "year": 2026,
-      "order": 7,
-      "pinned": false,
+      "order": 2,
+      "pinned": true,
       "has_page": true,
       "headline_metric": "72 backend tests pass locally; illustrative relation matrix has 7 x 5 cells",
       "publications": [],
@@ -177,7 +197,7 @@
       "category": "Artificial life",
       "languages": ["Python", "NumPy", "FastAPI", "JavaScript"],
       "year": 2026,
-      "order": 8,
+      "order": 9,
       "pinned": false,
       "has_page": true,
       "headline_metric": null,
@@ -197,7 +217,7 @@
       "category": "Computer graphics",
       "languages": ["Python", "NumPy", "Numba"],
       "year": 2026,
-      "order": 9,
+      "order": 10,
       "pinned": false,
       "has_page": true,
       "headline_metric": "Final scene: 400 x 225 pixels at 100 samples/pixel",
@@ -220,7 +240,7 @@
         "PyTorch"
       ],
       "year": 2025,
-      "order": 90,
+      "order": 11,
       "pinned": false,
       "has_page": false,
       "headline_metric": null,
@@ -229,6 +249,343 @@
       ],
       "links": {
         "repo": "https://github.com/EduardoTBuss/cifar10-cnn-pytorch",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "content-automation-pipeline",
+      "title": "Content Automation Pipeline",
+      "tagline": "AI-assisted content and lead workflows with approval, validation and idempotent error handling.",
+      "summary": "AI-assisted content and lead workflows with approval, validation and idempotent error handling.",
+      "category": "Applied automation",
+      "languages": [
+        "Python",
+        "n8n"
+      ],
+      "year": 2026,
+      "order": 12,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/content-automation-pipeline",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "climate-neural-network-c",
+      "title": "Climate Neural Network in C",
+      "tagline": "A feedforward weather model with backpropagation implemented directly in C.",
+      "summary": "A feedforward weather model with backpropagation implemented directly in C.",
+      "category": "Machine learning",
+      "languages": [
+        "C"
+      ],
+      "year": 2025,
+      "order": 13,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/climate-neural-network-c",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "z80-toolchain",
+      "title": "Z80 Toolchain",
+      "tagline": "A C++ assembler, linker, loader and emulator for Z80 programs.",
+      "summary": "A C++ assembler, linker, loader and emulator for Z80 programs.",
+      "category": "Systems engineering",
+      "languages": [
+        "C++",
+        "Qt"
+      ],
+      "year": 2026,
+      "order": 14,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/z80-toolchain",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "bank-concurrency-simulator",
+      "title": "Bank Concurrency Simulator",
+      "tagline": "Java simulations of races and deadlocks with balance audits and locking strategies.",
+      "summary": "Java simulations of races and deadlocks with balance audits and locking strategies.",
+      "category": "Systems engineering",
+      "languages": [
+        "Java"
+      ],
+      "year": 2026,
+      "order": 15,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/bank-concurrency-simulator",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "degree-flow",
+      "title": "Degree Flow",
+      "tagline": "An interactive planner for course prerequisites, schedules and degree progress.",
+      "summary": "An interactive planner for course prerequisites, schedules and degree progress.",
+      "category": "Web application",
+      "languages": [
+        "Python"
+      ],
+      "year": 2026,
+      "order": 16,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/degree-flow",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "explorador-urbano",
+      "title": "Explorador Urbano",
+      "tagline": "Real-time urban route tracking with multiplayer ranking.",
+      "summary": "Real-time urban route tracking with multiplayer ranking.",
+      "category": "Web application",
+      "languages": [
+        "Flask",
+        "WebSocket",
+        "Leaflet"
+      ],
+      "year": 2026,
+      "order": 17,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/explorador-urbano",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "book-map",
+      "title": "Book Map",
+      "tagline": "A map of the countries where a book is published, organized by language.",
+      "summary": "A map of the countries where a book is published, organized by language.",
+      "category": "Web application",
+      "languages": [
+        "JavaScript",
+        "React",
+        "Leaflet"
+      ],
+      "year": 2026,
+      "order": 18,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/book-map",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "truck-trip-manager",
+      "title": "Truck Trip Manager",
+      "tagline": "A public Dart application for organizing truck trips.",
+      "summary": "A public Dart application for organizing truck trips.",
+      "category": "Application",
+      "languages": [
+        "Dart"
+      ],
+      "year": 2026,
+      "order": 19,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/truck-trip-manager",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "computer-architecture-labs",
+      "title": "Computer Architecture Labs",
+      "tagline": "Cache simulation and SPEC95 experiments for computer architecture coursework.",
+      "summary": "Cache simulation and SPEC95 experiments for computer architecture coursework.",
+      "category": "Coursework",
+      "languages": [
+        "Python"
+      ],
+      "year": 2026,
+      "order": 20,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/computer-architecture-labs",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "digital-systems-labs",
+      "title": "Digital Systems Labs",
+      "tagline": "Synthesizable VHDL designs including an ALU, multiplier and controlled datapath.",
+      "summary": "Synthesizable VHDL designs including an ALU, multiplier and controlled datapath.",
+      "category": "Coursework",
+      "languages": [
+        "VHDL"
+      ],
+      "year": 2026,
+      "order": 21,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/digital-systems-labs",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "least-squares-housing",
+      "title": "Least Squares Housing",
+      "tagline": "California Housing regression using normal equations and a Cholesky solver built from scratch.",
+      "summary": "California Housing regression using normal equations and a Cholesky solver built from scratch.",
+      "category": "Coursework",
+      "languages": [
+        "Python"
+      ],
+      "year": 2026,
+      "order": 22,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/least-squares-housing",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "mario-kart-grand-prix",
+      "title": "Mario Kart Grand Prix",
+      "tagline": "Race management in C using custom heaps, linked lists, stacks and queues.",
+      "summary": "Race management in C using custom heaps, linked lists, stacks and queues.",
+      "category": "Coursework",
+      "languages": [
+        "C"
+      ],
+      "year": 2026,
+      "order": 23,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/mario-kart-grand-prix",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "java-battle-city",
+      "title": "Java Battle City",
+      "tagline": "A Battle City clone built for an object-oriented programming course.",
+      "summary": "A Battle City clone built for an object-oriented programming course.",
+      "category": "Coursework",
+      "languages": [
+        "Java"
+      ],
+      "year": 2026,
+      "order": 24,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/JavaBattleCity",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "go-wordcount-activities",
+      "title": "Go Word Count Activities",
+      "tagline": "Sequential and concurrent word-count exercises with performance comparison.",
+      "summary": "Sequential and concurrent word-count exercises with performance comparison.",
+      "category": "Coursework",
+      "languages": [
+        "Go"
+      ],
+      "year": 2026,
+      "order": 25,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/go-wordcount-activities",
+        "demo": null,
+        "docs": null,
+        "dataset": null
+      }
+    },
+    {
+      "slug": "numerical-methods-coursework",
+      "title": "Numerical Methods Coursework",
+      "tagline": "Python reports on numerical roots, linear systems, interpolation and integration.",
+      "summary": "Python reports on numerical roots, linear systems, interpolation and integration.",
+      "category": "Coursework",
+      "languages": [
+        "Python",
+        "Jupyter"
+      ],
+      "year": 2026,
+      "order": 26,
+      "pinned": false,
+      "has_page": false,
+      "headline_metric": null,
+      "publications": [],
+      "links": {
+        "repo": "https://github.com/EduardoTBuss/numerical-methods-coursework",
         "demo": null,
         "docs": null,
         "dataset": null
