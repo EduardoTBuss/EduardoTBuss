@@ -1,0 +1,36 @@
+{
+  "username": "EduardoTBuss",
+  "public_repos": 28,
+  "followers": 17,
+  "following": 23,
+  "stars_received": 4,
+  "forks_received": 0,
+  "top_languages": [
+    {
+      "name": "Python",
+      "repositories": 13
+    },
+    {
+      "name": "C",
+      "repositories": 2
+    },
+    {
+      "name": "Jupyter Notebook",
+      "repositories": 2
+    },
+    {
+      "name": "Astro",
+      "repositories": 1
+    },
+    {
+      "name": "TypeScript",
+      "repositories": 1
+    },
+    {
+      "name": "C++",
+      "repositories": 1
+    }
+  ],
+  "account_created_year": 2024,
+  "refreshed_at": "2026-09-24T14:13:13+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Eduardo Timm Buss",
+  "username": "EduardoTBuss",
+  "eyebrow": "RESEARCH PROFILE / SYSTEM ONLINE",
+  "role": "Computer Engineering @ UFPel",
+  "subtitle": "Undergraduate Researcher",
+  "bio": "I build and study computational systems at the intersection of quantum computing, fuzzy logic, artificial intelligence and digital hardware.",
+  "location": "Pelotas, RS, Brazil",
+  "interests": [
+    "Quantum Computing",
+    "Fuzzy Systems",
+    "Artificial Intelligence",
+    "Computer Vision"
+  ],
+  "links": {
+    "github": "https://github.com/EduardoTBuss",
+    "linkedin": "https://www.linkedin.com/in/eduardotimmbuss",
+    "orcid": "https://orcid.org/0009-0007-6356-5438",
+    "academic_email": "mailto:etbuss@inf.ufpel.edu.br"
+  }
+}
