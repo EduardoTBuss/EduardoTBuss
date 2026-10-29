@@ -83,8 +83,19 @@ future tone refinement is a change inside `stats_band.py` alone.
 `.github/workflows/update-profile.yml` runs daily (`17 9 * * *` UTC) and on `workflow_dispatch`,
 plus on push to `main` when a content or generator file changes. It validates, refreshes
 `data/github.json`, re-renders `README.md`, and commits `data/github.json`, `generated/` and
-`README.md` as `github-actions[bot]` if anything changed. `README.md` is excluded from the
+`README.md` as `github-actions[bot]` only if something changed. `README.md` is excluded from the
 push trigger's path list so the bot's own commit can never start another run.
+
+Nothing in the generated output depends on the date or the run time. `refreshed_at` in
+`data/github.json` means "when the numbers last changed": `github_api.refresh_github()` leaves
+the file untouched when the fetched numbers match the stored ones, and the stats SVG shows no
+date. So the daily run produces an empty diff, and no commit, until a repository, star,
+follower or language count actually moves. If the bot commits every day again, something
+time-dependent has leaked into a generated file: look for it there first.
+
+`.github/workflows/snake.yml` draws the contribution snake daily and force-pushes it to the
+`output` branch as one commit, never to `main`. The README embeds it from
+`raw.githubusercontent.com/.../output/`.
 
 ## What is preserved but retired
 

@@ -51,8 +51,17 @@ def request_json(url: str):
         return json.load(response)
 
 
+def _without_timestamp(snapshot: dict) -> dict:
+    return {key: val for key, val in snapshot.items() if key != "refreshed_at"}
+
+
 def refresh_github() -> dict:
-    """Fetch the public profile snapshot and persist it to data/github.json."""
+    """Fetch the public profile snapshot and persist it to data/github.json.
+
+    `refreshed_at` is "when the numbers last changed", not "when the cron last
+    ran". If the fetched numbers match what is already stored, the file is left
+    untouched, so the daily workflow finds an empty diff and commits nothing.
+    """
     user = request_json(f"{API_BASE}/users/{GITHUB_USERNAME}")
     repos = request_json(
         f"{API_BASE}/users/{GITHUB_USERNAME}/repos?per_page={REPOS_PER_PAGE}&sort=updated"
@@ -78,5 +87,11 @@ def refresh_github() -> dict:
         "account_created_year": int(created_at[:4]) if created_at[:4].isdigit() else None,
         "refreshed_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
+    try:
+        current = datastore.load("github.json")
+    except FileNotFoundError:
+        current = None
+    if current is not None and _without_timestamp(current) == _without_timestamp(value):
+        return current
     datastore.save_json("github.json", value)
     return value

@@ -12,7 +12,7 @@ from . import datastore, paths, stats_band
 
 SITE_BASE_URL = "https://eduardotbuss.github.io"
 PUBLICATIONS_SHOWN = 3
-STATS_CAPTION = "_Updated daily._"
+STATS_CAPTION = "<sub>Generated from the public GitHub API. Languages are counted per repository.</sub>"
 
 # (marker key) -> (opening comment, closing comment). Both must already
 # exist in README.md; render_readme() refuses to write if either is missing,
@@ -44,7 +44,7 @@ def render_projects_table(projects: dict) -> str:
         url = f"{SITE_BASE_URL}/projects/{item['slug']}/"
         title = _escape_cell(item["title"])
         tagline = _escape_cell(item["tagline"])
-        stack = _escape_cell(", ".join(item["languages"]))
+        stack = " ".join(f"`{_escape_cell(language)}`" for language in item["languages"])
         rows.append(f"| [{title}]({url}) | {tagline} | {stack} |")
     return "\n".join(rows)
 
@@ -59,7 +59,7 @@ def _publication_link(item: dict) -> str:
 def _publication_line(item: dict) -> str:
     status = item.get("status", "published")
     status_suffix = f" ({status})" if status != "published" else ""
-    citation = f"{item['title']}. {item['venue']}, {item['year']}{status_suffix}."
+    citation = f"{item['title']}. **{item['venue']}**, {item['year']}{status_suffix}."
     return f"- {citation}{_publication_link(item)}"
 
 
