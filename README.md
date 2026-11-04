@@ -86,7 +86,7 @@ Full list and project case studies, with evidence and limitations: **[eduardotbu
 <!-- stats:start -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./generated/stats-dark.svg">
-  <img src="./generated/stats-light.svg" width="760" alt="29 repositories · 4 stars received · 17 followers · on GitHub since 2024 · Python, C, Jupyter Notebook">
+  <img src="./generated/stats-light.svg" width="760" alt="29 repositories · 4 stars received · 18 followers · on GitHub since 2024 · Python, C, Jupyter Notebook">
 </picture>
 
 <sub>Generated from the public GitHub API. Languages are counted per repository.</sub>
