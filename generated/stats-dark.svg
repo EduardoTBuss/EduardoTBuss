@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="760" height="124" viewBox="0 0 760 124" role="img" aria-labelledby="stats-title">
-  <title id="stats-title">30 repositories · 4 stars received · 19 followers · on GitHub since 2024 · Python, C, Jupyter Notebook</title>
-  <text x="12" y="34" fill="#2f81f7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28" font-weight="700">30</text>
+  <title id="stats-title">31 repositories · 4 stars received · 19 followers · on GitHub since 2024 · Python, C, Jupyter Notebook</title>
+  <text x="12" y="34" fill="#2f81f7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28" font-weight="700">31</text>
   <text x="12" y="54" fill="#7d8590" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">repositories</text>
   <text x="196" y="34" fill="#2f81f7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28" font-weight="700">4</text>
   <text x="196" y="54" fill="#7d8590" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">stars received</text>
@@ -11,15 +11,15 @@
   <text x="12" y="82" fill="#7d8590" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">languages, by repository</text>
   <clipPath id="bar"><rect x="12" y="90" width="736" height="8" rx="4"/></clipPath>
   <g clip-path="url(#bar)">
-    <rect x="12.0" y="90" width="501.8" height="8" fill="#3572A5"/>
-    <rect x="513.8" y="90" width="66.9" height="8" fill="#8a8a8a"/>
-    <rect x="580.7" y="90" width="66.9" height="8" fill="#DA5B0B"/>
-    <rect x="647.6" y="90" width="33.5" height="8" fill="#ff5a03"/>
-    <rect x="681.1" y="90" width="33.5" height="8" fill="#3178c6"/>
-    <rect x="714.5" y="90" width="33.5" height="8" fill="#f34b7d"/>
+    <rect x="12.0" y="90" width="512.0" height="8" fill="#3572A5"/>
+    <rect x="524.0" y="90" width="64.0" height="8" fill="#8a8a8a"/>
+    <rect x="588.0" y="90" width="64.0" height="8" fill="#DA5B0B"/>
+    <rect x="652.0" y="90" width="32.0" height="8" fill="#ff5a03"/>
+    <rect x="684.0" y="90" width="32.0" height="8" fill="#3178c6"/>
+    <rect x="716.0" y="90" width="32.0" height="8" fill="#f34b7d"/>
   </g>
   <circle cx="16.0" cy="112" r="4" fill="#3572A5"/>
-  <text x="26.0" y="116" fill="#7d8590" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">Python 15</text>
+  <text x="26.0" y="116" fill="#7d8590" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">Python 16</text>
   <circle cx="107.4" cy="112" r="4" fill="#8a8a8a"/>
   <text x="117.4" y="116" fill="#7d8590" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">C 2</text>
   <circle cx="159.2" cy="112" r="4" fill="#DA5B0B"/>
