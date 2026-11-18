@@ -72,9 +72,9 @@ where experiments have to become reliable software.
 ## Recent publications
 
 <!-- publications:start -->
-- A Hybrid Classical–Quantum Formulation of Fuzzy CRI Inference with a Triage Case Study. **IEEE CEC 2026 (WCCI)**, 2026.
-- A Systematic Literature Review on Classical Data Encoding Strategies for Hybrid Quantum Machine Learning. **ICEIS 2026**, 2026. [DOI](https://doi.org/10.5220/0014958100004018)
-- QL-Implications: Quantum-Fuzzy Modeling and Application to Financial Decision-Making. **ENIAC 2026**, 2026 (accepted).
+- Circuit Depth in Variational Quantum Classifiers: Performance, Stability, and a Classical MLP Baseline. **ERAMIA-RS 2026**, 2026. [DOI](https://sol.sbc.org.br/index.php/eramiars/article/view/47396)
+- QL-Implications: Quantum-Fuzzy Modeling and Application to Financial Decision-Making. **ENIAC 2026**, 2026. [DOI](https://sol.sbc.org.br/index.php/eniac/article/view/47021)
+- A Hybrid Classical–Quantum Formulation of Fuzzy CRI Inference with a Triage Case Study. **IEEE CEC 2026 (WCCI)**, 2026. [DOI](https://doi.org/10.1109/CEC69861.2026.11727106)
 <!-- publications:end -->
 
 Full list and project case studies, with evidence and limitations: **[eduardotbuss.github.io](https://eduardotbuss.github.io)**
