@@ -1,14 +1,32 @@
 {
-  "updated": "2026-09-03",
+  "updated": "2026-11-18",
   "items": [
+    {
+      "id": "eramia-rs-2026-vqc-depth",
+      "year": 2026,
+      "title": "Circuit Depth in Variational Quantum Classifiers: Performance, Stability, and a Classical MLP Baseline",
+      "venue": "ERAMIA-RS 2026",
+      "status": "published",
+      "url": "https://sol.sbc.org.br/index.php/eramiars/article/view/47396",
+      "doi": "10.5753/eramiars.2026.35498"
+    },
+    {
+      "id": "eniac-2026-ql-implications",
+      "year": 2026,
+      "title": "QL-Implications: Quantum-Fuzzy Modeling and Application to Financial Decision-Making",
+      "venue": "ENIAC 2026",
+      "status": "published",
+      "url": "https://sol.sbc.org.br/index.php/eniac/article/view/47021",
+      "doi": "10.5753/eniac.2026.30945"
+    },
     {
       "id": "cec-2026-hybrid-fuzzy-cri",
       "year": 2026,
       "title": "A Hybrid Classical–Quantum Formulation of Fuzzy CRI Inference with a Triage Case Study",
       "venue": "IEEE CEC 2026 (WCCI)",
       "status": "published",
-      "url": "",
-      "doi": null
+      "url": "https://doi.org/10.1109/CEC69861.2026.11727106",
+      "doi": "10.1109/CEC69861.2026.11727106"
     },
     {
       "id": "iceis-2026-encoding-slr",
@@ -20,12 +38,12 @@
       "doi": "10.5220/0014958100004018"
     },
     {
-      "id": "eniac-2026-ql-implications",
+      "id": "weciq-2025-bernstein-vazirani",
       "year": 2026,
-      "title": "QL-Implications: Quantum-Fuzzy Modeling and Application to Financial Decision-Making",
-      "venue": "ENIAC 2026",
-      "status": "accepted",
-      "url": "",
+      "title": "Algoritmo de Bernstein-Vazirani: Análise Quântica com Implementação no Qiskit",
+      "venue": "WECIQ 2025 (extended abstract in the 2026 proceedings)",
+      "status": "published",
+      "url": "https://www.even3.com.br/anais/weciqwcq2025-556747/1263591-algoritmo-de-bernstein-vazirani--analise-quantica-com-implementacao-no-qiskit",
       "doi": null
     },
     {
@@ -45,15 +63,6 @@
       "status": "published",
       "url": "https://doi.org/10.5753/weit.2025.40445",
       "doi": "10.5753/weit.2025.40445"
-    },
-    {
-      "id": "weciq-2025-bernstein-vazirani",
-      "year": 2025,
-      "title": "Algoritmo de Bernstein-Vazirani: Análise Quântica com Implementação no Qiskit",
-      "venue": "WECIQ 2025",
-      "status": "published",
-      "url": "https://www.even3.com.br/anais/weciqwcq2025-556747/1263591-algoritmo-de-bernstein-vazirani--analise-quantica-com-implementacao-no-qiskit",
-      "doi": null
     }
   ]
 }
