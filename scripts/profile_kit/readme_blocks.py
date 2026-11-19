@@ -52,8 +52,10 @@ def render_projects_table(projects: dict) -> str:
 def _publication_link(item: dict) -> str:
     url = item.get("url") or ""
     doi = item.get("doi") or ""
-    target = url or (f"https://doi.org/{doi}" if doi else "")
-    return f" [DOI]({target})" if target else ""
+    doi_url = f"https://doi.org/{doi}" if doi and not item.get("doi_unavailable") else ""
+    target = url or doi_url
+    label = "DOI" if target == doi_url else "Proceedings"
+    return f" [{label}]({target})" if target else ""
 
 
 def _publication_line(item: dict) -> str:

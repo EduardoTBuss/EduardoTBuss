@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "items": [
     {
       "id": "eramia-rs-2026-vqc-depth",
@@ -8,7 +8,8 @@
       "venue": "ERAMIA-RS 2026",
       "status": "published",
       "url": "https://sol.sbc.org.br/index.php/eramiars/article/view/47396",
-      "doi": "10.5753/eramiars.2026.35498"
+      "doi": "10.5753/eramiars.2026.35498",
+      "doi_unavailable": true
     },
     {
       "id": "eniac-2026-ql-implications",
